@@ -7,7 +7,7 @@ Este documento detalla el procedimiento técnico utilizado para la extracción d
 El proceso de extracción se realizó mediante un script en Python que gestiona la obtención de datos de manera programática.
 
 ### Código de Extracción (Arquitectura)
-El código utiliza `requests` para gestionar las peticiones HTTP y `pandas` para el tratamiento de datos. El bucle `while` implementa un mecanismo de paginación (`skip`) para eludir limitaciones de carga de datos, asegurando una recolección incremental hasta alcanzar el límite deseado (100 registros). 
+El código utiliza `requests` para gestionar las peticiones HTTP y `pandas` para el tratamiento de datos. El bucle `while` implementa un mecanismo de paginación (`skip`) para eludir limitaciones de carga de datos, asegurando una recolección incremental hasta alcanzar el límite deseado (63 registros). 
 
 El script procesa la respuesta JSON, extrae campos clave como `medio`, `score` y `snippet`, y normaliza los datos para su exportación a un formato CSV limpio.
 
