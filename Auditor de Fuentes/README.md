@@ -2,45 +2,76 @@
 
 Este proyecto tiene como objetivo automatizar la auditoría de sitios web para determinar el método más ético y eficiente de extracción de datos, analizando archivos `robots.txt` y evaluando la disponibilidad de APIs oficiales.
 
-## 🛠️ Metodología y Justificación
+# 🛠️ Metodología y Justificación
 
-Para la obtención de datos de nuestras fuentes, hemos adoptado un enfoque híbrido, seleccionando el método más adecuado según la estructura y políticas de cada plataforma.
+Para la obtención de datos, se adoptó un enfoque basado exclusivamente en el consumo de **APIs oficiales** y **endpoints de datos estructurados**, seleccionando el método más eficiente para garantizar la integridad, estabilidad y reproducibilidad de la información.
 
-### 1. Steam Store: Enfoque de *Web Scraping* (`requests`)
-Para la extracción de reseñas y metadatos en Steam, se ha optado por el uso de `requests` y técnicas de *web scraping* directo.
+## 1. Steam Store: Enfoque mediante API (Endpoint JSON)
 
-* **Racionalización:** Tras realizar una auditoría de las reglas de exclusión (`robots.txt`), se verificó que los endpoints de acceso a la tienda y reseñas son accesibles.
-* **Decisión Técnica:** Aunque Steam cuenta con una API oficial, el *scraping* directo mediante `requests` permite una mayor flexibilidad para el análisis específico de reseñas que el proyecto requiere. Se ha implementado de manera responsable, respetando el `crawl-delay` y limitando la frecuencia de peticiones para no afectar la disponibilidad del servicio.
+Para la extracción de reseñas y metadatos de Steam se utiliza el endpoint oficial de reseñas (`/appreviews/`) mediante el parámetro `?json=1`.
 
-### 2. OpenCritic: Enfoque basado en API
-Para OpenCritic, se ha priorizado el uso de su infraestructura de API sobre la técnica de *scraping*.
+### Racionalización
 
-* **Racionalización:** OpenCritic provee una API estructurada que facilita la obtención de metadatos de forma organizada y eficiente.
-* **Decisión Técnica:** El uso de la API garantiza una mayor estabilidad en la extracción de datos, evitando las posibles interrupciones que generan los cambios frecuentes en el diseño (*frontend*) de un sitio web. Al utilizar la vía oficial, garantizamos una mayor integridad en la información recolectada.
+Tras auditar la estructura de datos de la plataforma, se confirmó que este endpoint proporciona toda la información necesaria de forma estructurada y eficiente.
 
-### Resumen de Estrategia
+### Decisión técnica
 
-| Fuente | Método Seleccionado | Justificación |
-| :--- | :--- | :--- |
-| **Steam** | `requests` (Scraping) | Flexibilidad en el parseo; rutas permitidas en `robots.txt`. |
-| **OpenCritic** | API Oficial | Estabilidad, eficiencia y alineación con políticas de uso. |
+El uso de este endpoint oficial ofrece una mayor fiabilidad que el *parsing* de HTML, asegurando que los datos obtenidos sean consistentes y no se vean afectados por cambios en el diseño visual (*frontend*) del sitio. La implementación se realiza de forma responsable mediante un **User-Agent** identificado y limitando la frecuencia de las peticiones.
 
 ---
 
-## ⚙️ Auditoría Automatizada
+## 2. OpenCritic: Enfoque basado en API
 
-El proyecto incluye un script de auditoría que evalúa cada fuente antes de la extracción. La clase `AuditorRobots` realiza las siguientes funciones:
+Para OpenCritic se utiliza su infraestructura de API gestionada a través de RapidAPI.
 
-1. **Lectura de `robots.txt`:** Identifica los permisos para nuestro `User-Agent`.
-2. **Evaluación de Rutas:** Clasifica el nivel de acceso en `ALTO`, `MEDIO`, `RESTRINGIDO` o `API_RECOMENDADA`.
-3. **Extracción de Metadatos:** Detecta `Sitemaps` y `Crawl-delays` para optimizar el comportamiento del cliente de extracción.
+### Racionalización
 
-## ⚖️ Consideraciones Éticas y Buenas Prácticas
+OpenCritic proporciona una API estructurada que facilita la obtención de metadatos de forma organizada, consistente y eficiente.
 
-La integridad de los datos y el respeto por los servidores de terceros son pilares fundamentales en este proyecto. Para asegurar un proceso de extracción responsable, hemos implementado los siguientes controles:
+### Decisión técnica
 
-* **Respeto a `robots.txt`**: El sistema audita automáticamente el archivo `robots.txt` de cada fuente antes de realizar cualquier solicitud. Si el acceso a una ruta no está explícitamente permitido, el sistema prioriza la vía de la API oficial o solicita una revisión manual.
-* **Carga Controlada (Crawl-Delay)**: Aunque nuestras herramientas de *scraping* no realizan peticiones masivas sin control, el diseño permite configurar pausas entre peticiones para mitigar cualquier impacto en la latencia del sitio web.
-* **Identificación del Usuario**: Todas las peticiones se realizan identificando claramente nuestro origen mediante un `User-Agent` personalizado (`ProyectoFakeReviews/1.0`). Esto permite a los administradores de los sitios identificar el tráfico y bloquearnos si consideran que nuestra actividad es inapropiada.
-* **Uso de APIs como Primera Opción**: Siempre que una plataforma proporciona una API, esta se utiliza como vía principal de extracción. Esto no solo garantiza la estabilidad de nuestro pipeline, sino que también reduce significativamente la carga sobre la infraestructura del *frontend* del sitio.
-* **Transparencia**: Este código está documentado para que el proceso de extracción sea auditable, reproducible y respetuoso con los términos de servicio
+El uso de la API garantiza una mayor estabilidad durante la extracción de datos y mantiene una alineación con las políticas de uso de la plataforma, evitando las interrupciones que podrían producir los cambios en la interfaz web.
+
+---
+
+# 📊 Resumen de la estrategia
+
+| Fuente     | Método seleccionado    | Justificación                                                                   |
+| ---------- | ---------------------- | ------------------------------------------------------------------------------- |
+| Steam      | API (Endpoint JSON)    | Datos estructurados, estabilidad ante cambios visuales y eficiencia operativa.  |
+| OpenCritic | API Oficial (RapidAPI) | Estabilidad, eficiencia y alineación con las políticas de uso de la plataforma. |
+
+---
+
+# ⚙️ Auditoría Automatizada
+
+El proyecto incorpora un script de auditoría que evalúa cada fuente antes del proceso de extracción.
+
+La clase `AuditorRobots` realiza las siguientes funciones:
+
+* **Lectura de directrices:** identifica las políticas de acceso aplicables al **User-Agent** utilizado.
+* **Evaluación de límites:** clasifica el nivel de acceso disponible y detecta restricciones de tasa (*Rate Limits*) para optimizar el comportamiento del cliente de extracción.
+* **Optimización de peticiones:** identifica parámetros y recomendaciones que permiten realizar un consumo responsable de la infraestructura de las plataformas.
+
+---
+
+# ⚖️ Consideraciones Éticas y Buenas Prácticas
+
+La integridad de los datos y el respeto por la infraestructura de terceros constituyen principios fundamentales del proyecto. Para garantizar un proceso de extracción responsable se implementan las siguientes medidas:
+
+* **Identificación del cliente:** todas las solicitudes HTTP incluyen un **User-Agent** personalizado (`ProyectoFakeReviews/1.0`), permitiendo identificar claramente el origen de las peticiones.
+* **Control de carga (*Rate Limiting*):** el sistema incorpora pausas programadas (`time.sleep`) entre solicitudes para reducir el impacto sobre los servidores.
+* **Uso exclusivo de vías oficiales:** la información se obtiene únicamente mediante APIs y endpoints públicos proporcionados por las plataformas, garantizando la estabilidad del proceso de extracción y minimizando la carga sobre su infraestructura.
+* **Transparencia y reproducibilidad:** el código se encuentra documentado para que el proceso de extracción pueda ser auditado, reproducido y mantenido de acuerdo con las buenas prácticas de ingeniería de software.
+
+---
+
+# ✅ Principios del Proyecto
+
+Este proyecto sigue cuatro principios fundamentales durante la obtención de datos:
+
+* **Legalidad:** utilización exclusiva de APIs y endpoints oficiales.
+* **Responsabilidad:** respeto por los límites de uso y la infraestructura de las plataformas.
+* **Reproducibilidad:** metodología documentada y fácilmente verificable.
+* **Calidad de datos:** consumo de información estructurada para minimizar errores y maximizar la consistencia del conjunto de datos.
+
