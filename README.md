@@ -26,7 +26,7 @@
   <li><b>Fase 1: Recopilación y Estructuración de Datos (Extracción)</b>
     <ul>
       <li>Diseñar y ejecutar módulos de recolección de datos (vía API o web scraping) para extraer masivamente reseñas de usuarios y críticos desde Steam y OpenCritic.</li>
-      <li>Clasificar los metadatos asociados a cada reseña (fecha de publicación, tiempo de juego registrado, historial del revisor).</li>
+      <li>Clasificar los metadatos asociados a cada reseña (fecha de publicación, tiempo de juego registrado, recomendaciones/puntaje dado).</li>
     </ul>
   </li>
   <li><b>Fase 2: Procesamiento de Lenguaje Natural (Análisis Lingüístico)</b>
