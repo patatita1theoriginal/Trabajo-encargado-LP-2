@@ -323,7 +323,7 @@ Este documento centraliza el código para el análisis de sentimientos y detecci
 ]
 ```
 
-## 2. `Analisis de la tabla para detectar los si es AI `
+## 2. `Analisis de la tabla para detectar si es AI `
 
 
  |Medio|Puntuacion|Comentario|Indice\_ia|
