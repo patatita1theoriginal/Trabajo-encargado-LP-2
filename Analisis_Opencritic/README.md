@@ -1,8 +1,40 @@
-# Proyecto: Sistema de Análisis de Reseñas y Datos de Videojuegos
+# Proyecto Técnico: Extracción y Análisis de Reseñas de Videojuegos
 
-Este documento centraliza el código para el análisis de sentimientos y detección de texto generado por IA, así como la gestión de datos de **OpenCritic**.
+## 1. Introducción
+Este documento detalla el procedimiento técnico utilizado para la extracción de reseñas de videojuegos desde la API de OpenCritic, así como la metodología propuesta para evaluar la autenticidad de los textos mediante técnicas de detección de Inteligencia Artificial.
 
-## 1. Código Integrado de Json (`analisis`)
+## 2. Metodología de Extracción
+El proceso de extracción se realizó mediante un script en Python que gestiona la obtención de datos de manera programática.
+
+### Arquitectura del Proceso
+- **Lenguaje:** Python
+- **Bibliotecas clave:** `requests` (gestión de peticiones API), `pandas` (procesamiento de datos), `os` y `time` (automatización).
+- **Paginación:** Implementada mediante el parámetro `skip` para recorrer el historial de reseñas de forma paginada.
+- **Limpieza:** Se aplicó un filtro para eliminar duplicados y normalizar los tipos de datos en la columna `puntuacion`.
+
+
+
+## 3. Análisis de Factibilidad: Detección de Contenido IA
+Para determinar si una reseña ha sido redactada por una IA, se propone un análisis basado en métricas lingüísticas avanzadas.
+
+### Criterios de Evaluación
+1. **Análisis de Perplejidad:** Las IAs suelen generar textos con baja perplejidad, ya que son modelos estadísticos que eligen la siguiente palabra más probable.
+2. **Análisis de Burstiness (Variabilidad):** Los textos humanos presentan una mayor variación en la longitud y estructura de las oraciones. Las IA tienden a ser más uniformes.
+3. **Embeddings y Clasificación:**
+   - **Vectorización:** Conversión de texto a vectores numéricos (modelo BERT/RoBERTa).
+   - **Clasificador:** Comparación de los vectores obtenidos contra modelos entrenados en datasets de escritura humana vs. sintética.
+
+## 4. Estructura de Datos (Dataset Resultante)
+Los datos recolectados se almacenan en un archivo `.csv` con la siguiente estructura:
+
+| Columna | Descripción |
+| :--- | :--- |
+| `medio` | Nombre de la publicación de origen. |
+| `puntuacion` | Valor numérico asignado al juego. |
+| `comentario` | Texto de la reseña (snippet). |
+
+
+## 5. Código Integrado de Json (`analisis`)
 ```json
 [
     {
@@ -323,7 +355,7 @@ Este documento centraliza el código para el análisis de sentimientos y detecci
 ]
 ```
 
-## 2. `Analisis de la tabla para detectar si es AI `
+## 6. `Analisis de la tabla para detectar si es AI `
 
 
 | Medio | Puntuación | Comentario | Índice IA |
@@ -391,3 +423,5 @@ Este documento centraliza el código para el análisis de sentimientos y detecci
 | KonsoliFIN | 60.0 | Después de 14 años llega a PC. Aunque es genial, el tiempo no ha tratado bien todos los aspectos. Solo para completistas. | 5 |
 | Thumb Culture | 60.0 | Creo que habría sido mejor un remaster. Tras disfrutar las mejoras de RDR2, no lo encontré tan disfrutable como en PS3. | 5 |
 | Expansive | 60.0 | Un port prácticamente perfecto en Switch. La falta de multijugador y el precio elevado pueden disuadir a algunos, pero es una propuesta tentadora. | 5 |
+## 7. Conclusión
+El proceso de extracción es altamente escalable. Sin embargo, la detección de IA requiere un enfoque estadístico robusto. Se recomienda una fase de validación donde se contrasten los resultados del modelo de detección con una muestra aleatoria de reseñas revisada manualmente para establecer un umbral de confianza (Índice de Probabilidad de Origen).
