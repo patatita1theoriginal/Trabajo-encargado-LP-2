@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.25">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Dashboard de analisis de reseñas: Steam y OpenCritic</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="dashboard_resenas_steam_opencritic_files/libs/clipboard/clipboard.min.js"></script>
+<script src="dashboard_resenas_steam_opencritic_files/libs/quarto-html/quarto.js" type="module"></script>
+<script src="dashboard_resenas_steam_opencritic_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="dashboard_resenas_steam_opencritic_files/libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="dashboard_resenas_steam_opencritic_files/libs/quarto-html/popper.min.js"></script>
+<script src="dashboard_resenas_steam_opencritic_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="dashboard_resenas_steam_opencritic_files/libs/quarto-html/anchor.min.js"></script>
+<link href="dashboard_resenas_steam_opencritic_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="dashboard_resenas_steam_opencritic_files/libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="dashboard_resenas_steam_opencritic_files/libs/quarto-html/quarto-syntax-highlighting-dark-707d8167ce6003fca903bfe2be84ab7f.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="dashboard_resenas_steam_opencritic_files/libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="dashboard_resenas_steam_opencritic_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="dashboard_resenas_steam_opencritic_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="dashboard_resenas_steam_opencritic_files/libs/bootstrap/bootstrap-7bdf1c8e8f98638fa310f44532f0922b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="dashboard_resenas_steam_opencritic_files/libs/bootstrap/bootstrap-dark-7bdf1c8e8f98638fa310f44532f0922b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<link href="dashboard_resenas_steam_opencritic_files/libs/bootstrap/bootstrap-7bdf1c8e8f98638fa310f44532f0922b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="dashboard_resenas_steam_opencritic_files/libs/quarto-dashboard/quarto-dashboard.js"></script>
+<script src="dashboard_resenas_steam_opencritic_files/libs/quarto-dashboard/stickythead.js"></script>
+
+
+
+<script src="dashboard_resenas_steam_opencritic_files/libs/quarto-dashboard/web-components.js" type="module"></script>
+<script src="dashboard_resenas_steam_opencritic_files/libs/quarto-dashboard/components.js"></script>
+
+<link href="dashboard_resenas_steam_opencritic_files/libs/htmltools-fill-0.5.9/fill.css" rel="stylesheet">
+
+<script src="dashboard_resenas_steam_opencritic_files/libs/bslib-component-js-0.10.0/components.min.js"></script>
+
+<script src="dashboard_resenas_steam_opencritic_files/libs/bslib-component-js-0.10.0/web-components.min.js" type="module"></script>
+
+<link href="dashboard_resenas_steam_opencritic_files/libs/bslib-component-css-0.10.0/components.css" rel="stylesheet">
+
+<script src="dashboard_resenas_steam_opencritic_files/libs/bslib-tag-require-0.10.0/tag-require.js"></script>
+
+<script src="dashboard_resenas_steam_opencritic_files/libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+
+<link href="dashboard_resenas_steam_opencritic_files/libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet">
+
+<script src="dashboard_resenas_steam_opencritic_files/libs/datatables-binding-0.34.0/datatables.js"></script>
+
+<script src="dashboard_resenas_steam_opencritic_files/libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+
+<link href="dashboard_resenas_steam_opencritic_files/libs/dt-core-1.13.6/css/jquery.dataTables.min.css" rel="stylesheet">
+
+<link href="dashboard_resenas_steam_opencritic_files/libs/dt-core-1.13.6/css/jquery.dataTables.extra.css" rel="stylesheet">
+
+<script src="dashboard_resenas_steam_opencritic_files/libs/dt-core-1.13.6/js/jquery.dataTables.min.js"></script>
+
+<link href="dashboard_resenas_steam_opencritic_files/libs/crosstalk-1.2.2/css/crosstalk.min.css" rel="stylesheet">
+
+<script src="dashboard_resenas_steam_opencritic_files/libs/crosstalk-1.2.2/js/crosstalk.min.js"></script>
+
+<link href="dashboard_resenas_steam_opencritic_files/libs/nouislider-7.0.10/jquery.nouislider.min.css" rel="stylesheet">
+
+<script src="dashboard_resenas_steam_opencritic_files/libs/nouislider-7.0.10/jquery.nouislider.min.js"></script>
+
+<link href="dashboard_resenas_steam_opencritic_files/libs/selectize-0.12.0/selectize.bootstrap3.css" rel="stylesheet">
+
+<script src="dashboard_resenas_steam_opencritic_files/libs/selectize-0.12.0/selectize.min.js"></script>
+
+
+
+</head>
+
+<body class="quarto-dashboard fullcontent quarto-light">
+
+<header id="quarto-dashboard-header">
+<nav class="navbar navbar-expand-md slim" data-bs-theme="dark">
+  <div class="navbar-container container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-controls="dashboard-collapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>    
+
+
+    <div class="navbar-brand-container">
+
+
+      <div class="navbar-title">
+        <div class="navbar-title-text"><a href="#">Dashboard de analisis de reseñas: Steam y OpenCritic</a></div>
+        <div class="navbar-subtitle">Uso de ia en las Fake reviews</div>
+        
+      </div>
+    </div>
+<div id="dashboard-collapse" class="navbar-collapse collapse"><ul class="navbar-nav navbar-nav-scroll me-auto" role="tablist"><li class="nav-item" role="presentation"><a id="tab-resumen-general" class="nav-link active" data-bs-toggle="tab" role="tab" data-bs-target="#resumen-general" data-scrolling="true" href="#resumen-general" aria-controls="resumen-general" aria-selected="true"><span class="nav-link-text">Resumen general</span></a></li><li class="nav-item" role="presentation"><a id="tab-steam" class="nav-link" data-bs-toggle="tab" role="tab" data-bs-target="#steam" data-scrolling="true" href="#steam" aria-controls="steam" aria-selected="false"><span class="nav-link-text">Steam</span></a></li><li class="nav-item" role="presentation"><a id="tab-opencritic" class="nav-link" data-bs-toggle="tab" role="tab" data-bs-target="#opencritic" data-scrolling="true" href="#opencritic" aria-controls="opencritic" aria-selected="false"><span class="nav-link-text">OpenCritic</span></a></li><li class="nav-item" role="presentation"><a id="tab-comparación-textual" class="nav-link" data-bs-toggle="tab" role="tab" data-bs-target="#comparación-textual" data-scrolling="true" href="#comparación-textual" aria-controls="comparación-textual" aria-selected="false"><span class="nav-link-text">Comparación textual</span></a></li><li class="nav-item" role="presentation"><a id="tab-nubes-de-palabras" class="nav-link" data-bs-toggle="tab" role="tab" data-bs-target="#nubes-de-palabras" data-scrolling="true" href="#nubes-de-palabras" aria-controls="nubes-de-palabras" aria-selected="false"><span class="nav-link-text">Nubes de palabras</span></a></li><li class="nav-item" role="presentation"><a id="tab-notas-metodologicas" class="nav-link" data-bs-toggle="tab" role="tab" data-bs-target="#notas-metodologicas" data-scrolling="true" href="#notas-metodologicas" aria-controls="notas-metodologicas" aria-selected="false"><span class="nav-link-text">Notas Metodologicas</span></a></li></ul><div class="quarto-dashboard-links"><a class="quarto-dashboard-link" href="https://github.com/patatita1theoriginal/Trabajo-encargado-LP-2.git"><i class="bi bi-github"></i></a></div></div></div>
+</nav>
+</header>
+<div class="page-layout-custom quarto-dashboard-content bslib-gap-spacing html-fill-container dashboard-scrolling quarto-dashboard-pages">  
+
+<div class="bslib-grid-item html-fill-item tab-content bslib-grid" data-layout="flow" style="display: grid; grid-template-rows: minmax(3em, 1fr); grid-auto-columns: minmax(0, 1fr);">
+<div id="resumen-general" class="dashboard-page tab-pane show active html-fill-item html-fill-container" data-orientation="rows" aria-labelledby="tab-resumen-general">
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-rows: minmax(3em, 25fr) minmax(3em, 75fr); grid-auto-columns: minmax(0, 1fr);">
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-columns: minmax(3em, 1fr) minmax(3em, 1fr) minmax(3em, 1fr) minmax(3em, 1fr);
+grid-auto-rows: minmax(0, 1fr);">
+<div class="card bslib-card bslib-mb-spacing html-fill-item html-fill-container bslib-value-box bg-primary showcase-left-center" data-bslib-card-init="" data-require-bs-caller="card()" data-require-bs-version="5 5" data-full-screen="false">
+<div class="card-body bslib-gap-spacing html-fill-item html-fill-container" style="margin-top:auto;margin-bottom:auto;flex:1 1 auto; padding:0;">
+<div class="value-box-grid html-fill-item" style="--bslib-grid-height:auto;--bslib-grid-height-mobile:auto;---bslib-value-box-showcase-w:30%;---bslib-value-box-showcase-w-fs:1fr;---bslib-value-box-showcase-max-h:100px;---bslib-value-box-showcase-max-h-fs:67%;">
+<div class="value-box-showcase html-fill-item html-fill-container">🧾</div>
+<div class="value-box-area html-fill-item html-fill-container">
+<p class="value-box-title">Total de reseñas</p>
+<p class="value-box-value">163</p>
+</div>
+</div>
+</div>
+<script data-bslib-card-init="">bslib.Card.initializeAllCards();</script>
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div><div class="card bslib-card bslib-mb-spacing html-fill-item html-fill-container bslib-value-box bg-success showcase-left-center" data-bslib-card-init="" data-require-bs-caller="card()" data-require-bs-version="5 5" data-full-screen="false">
+<div class="card-body bslib-gap-spacing html-fill-item html-fill-container" style="margin-top:auto;margin-bottom:auto;flex:1 1 auto; padding:0;">
+<div class="value-box-grid html-fill-item" style="--bslib-grid-height:auto;--bslib-grid-height-mobile:auto;---bslib-value-box-showcase-w:30%;---bslib-value-box-showcase-w-fs:1fr;---bslib-value-box-showcase-max-h:100px;---bslib-value-box-showcase-max-h-fs:67%;">
+<div class="value-box-showcase html-fill-item html-fill-container">🎮</div>
+<div class="value-box-area html-fill-item html-fill-container">
+<p class="value-box-title">Reseñas Steam</p>
+<p class="value-box-value">100</p>
+</div>
+</div>
+</div>
+<script data-bslib-card-init="">bslib.Card.initializeAllCards();</script>
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div><div class="card bslib-card bslib-mb-spacing html-fill-item html-fill-container bslib-value-box bg-warning showcase-left-center" data-bslib-card-init="" data-require-bs-caller="card()" data-require-bs-version="5 5" data-full-screen="false">
+<div class="card-body bslib-gap-spacing html-fill-item html-fill-container" style="margin-top:auto;margin-bottom:auto;flex:1 1 auto; padding:0;">
+<div class="value-box-grid html-fill-item" style="--bslib-grid-height:auto;--bslib-grid-height-mobile:auto;---bslib-value-box-showcase-w:30%;---bslib-value-box-showcase-w-fs:1fr;---bslib-value-box-showcase-max-h:100px;---bslib-value-box-showcase-max-h-fs:67%;">
+<div class="value-box-showcase html-fill-item html-fill-container">📝</div>
+<div class="value-box-area html-fill-item html-fill-container">
+<p class="value-box-title">Reseñas OpenCritic</p>
+<p class="value-box-value">63</p>
+</div>
+</div>
+</div>
+<script data-bslib-card-init="">bslib.Card.initializeAllCards();</script>
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div><div class="card bslib-card bslib-mb-spacing html-fill-item html-fill-container bslib-value-box bg-danger showcase-left-center" data-bslib-card-init="" data-require-bs-caller="card()" data-require-bs-version="5 5" data-full-screen="false">
+<div class="card-body bslib-gap-spacing html-fill-item html-fill-container" style="margin-top:auto;margin-bottom:auto;flex:1 1 auto; padding:0;">
+<div class="value-box-grid html-fill-item" style="--bslib-grid-height:auto;--bslib-grid-height-mobile:auto;---bslib-value-box-showcase-w:30%;---bslib-value-box-showcase-w-fs:1fr;---bslib-value-box-showcase-max-h:100px;---bslib-value-box-showcase-max-h-fs:67%;">
+<div class="value-box-showcase html-fill-item html-fill-container">🤖</div>
+<div class="value-box-area html-fill-item html-fill-container">
+<p class="value-box-title">Reseñas con posible IA</p>
+<p class="value-box-value">13</p>
+</div>
+</div>
+</div>
+<script data-bslib-card-init="">bslib.Card.initializeAllCards();</script>
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
+</div>
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-columns: minmax(3em, 1fr) minmax(3em, 1fr);
+grid-auto-rows: minmax(0, 1fr);">
+<div class="card cell html-fill-item html-fill-container bslib-card" data-title="Distribución de sentimientos por fuente" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-header"><div class="card-title"><span style="display: inline">
+Distribución de sentimientos por fuente
+</span></div></div>
+<div class="card-body html-fill-item html-fill-container">
+<div class="cell-output-display html-fill-item html-fill-container">
+<img src="dashboard_resenas_steam_opencritic_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid quarto-dashboard-img-contain">
+</div>
+</div>
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div><div class="card cell html-fill-item html-fill-container bslib-card" data-title="Resumen comparativo" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-header"><div class="card-title"><span style="display: inline">
+Resumen comparativo
+</span></div></div>
+<div class="card-body html-fill-item html-fill-container">
+<div class="cell-output-display html-fill-item html-fill-container">
+<div class="datatables html-widget html-fill-item html-fill-container" id="htmlwidget-26458a98d8788875149c" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-26458a98d8788875149c">{"x":{"filter":"none","vertical":false,"data":[["OpenCritic","Steam"],[63,100],[69.68000000000001,13.5],[-0.825,-0.067],[5.1,1.79],[13,0]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>fuente<\/th>\n      <th>reseñas<\/th>\n      <th>palabras_promedio<\/th>\n      <th>sentimiento_promedio<\/th>\n      <th>indice_ia_promedio<\/th>\n      <th>posible_ia<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"bPaginate":false,"dom":"t","language":{"info":"Showing _TOTAL_ entries"},"pageLength":5,"columnDefs":[{"className":"dt-right","targets":[1,2,3,4,5]},{"name":"fuente","targets":0},{"name":"reseñas","targets":1},{"name":"palabras_promedio","targets":2},{"name":"sentimiento_promedio","targets":3},{"name":"indice_ia_promedio","targets":4},{"name":"posible_ia","targets":5}],"order":[],"autoWidth":false,"orderClasses":false,"lengthMenu":[5,10,25,50,100]}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
+</div>
+</div>
+</div>
+<div id="steam" class="dashboard-page tab-pane grid-skip html-fill-item html-fill-container" data-orientation="rows" aria-labelledby="tab-steam">
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-rows: minmax(3em, 45fr) minmax(3em, 55fr); grid-auto-columns: minmax(0, 1fr);">
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-columns: minmax(3em, 1fr) minmax(3em, 1fr);
+grid-auto-rows: minmax(0, 1fr);">
+<div class="card cell html-fill-item html-fill-container bslib-card" data-title="Top 20 palabras - Steam" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-header"><div class="card-title"><span style="display: inline">
+Top 20 palabras - Steam
+</span></div></div>
+<div class="card-body html-fill-item html-fill-container">
+<div class="cell-output-display html-fill-item html-fill-container">
+<img src="dashboard_resenas_steam_opencritic_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid quarto-dashboard-img-contain">
+</div>
+</div>
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div><div class="card cell html-fill-item html-fill-container bslib-card" data-title="Sentimientos - Steam" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-header"><div class="card-title"><span style="display: inline">
+Sentimientos - Steam
+</span></div></div>
+<div class="card-body html-fill-item html-fill-container">
+<div class="cell-output-display html-fill-item html-fill-container">
+<img src="dashboard_resenas_steam_opencritic_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid quarto-dashboard-img-contain">
+</div>
+</div>
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
+</div>
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-columns: minmax(3em, 1fr) minmax(3em, 1fr) minmax(3em, 1fr);
+grid-auto-rows: minmax(0, 1fr);">
+<div class="card cell html-fill-item html-fill-container bslib-card" data-title="Emociones NRC - Steam" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-header"><div class="card-title"><span style="display: inline">
+Emociones NRC - Steam
+</span></div></div>
+<div class="card-body html-fill-item html-fill-container">
+<div class="cell-output-display html-fill-item html-fill-container">
+<img src="dashboard_resenas_steam_opencritic_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid quarto-dashboard-img-contain">
+</div>
+</div>
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div><div class="card cell html-fill-item html-fill-container bslib-card" data-title="Clasificación IA - Steam" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-header"><div class="card-title"><span style="display: inline">
+Clasificación IA - Steam
+</span></div></div>
+<div class="card-body html-fill-item html-fill-container">
+<div class="cell-output-display html-fill-item html-fill-container">
+<img src="dashboard_resenas_steam_opencritic_files/figure-html/unnamed-chunk-11-1.png" class="img-fluid quarto-dashboard-img-contain">
+</div>
+</div>
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div><div class="card cell html-fill-item html-fill-container bslib-card" data-title="Índice IA por categoría - Steam" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-header"><div class="card-title"><span style="display: inline">
+Índice IA por categoría - Steam
+</span></div></div>
+<div class="card-body html-fill-item html-fill-container">
+<div class="cell-output-display html-fill-item html-fill-container">
+<img src="dashboard_resenas_steam_opencritic_files/figure-html/unnamed-chunk-12-1.png" class="img-fluid quarto-dashboard-img-contain">
+</div>
+</div>
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
+</div>
+</div>
+</div>
+<div id="opencritic" class="dashboard-page tab-pane grid-skip html-fill-item html-fill-container" data-orientation="rows" aria-labelledby="tab-opencritic">
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-rows: minmax(3em, 45fr) minmax(3em, 55fr); grid-auto-columns: minmax(0, 1fr);">
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-columns: minmax(3em, 1fr) minmax(3em, 1fr);
+grid-auto-rows: minmax(0, 1fr);">
+<div class="card cell html-fill-item html-fill-container bslib-card" data-title="Top 20 palabras - OpenCritic" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-header"><div class="card-title"><span style="display: inline">
+Top 20 palabras - OpenCritic
+</span></div></div>
+<div class="card-body html-fill-item html-fill-container">
+<div class="cell-output-display html-fill-item html-fill-container">
+<img src="dashboard_resenas_steam_opencritic_files/figure-html/unnamed-chunk-13-1.png" class="img-fluid quarto-dashboard-img-contain">
+</div>
+</div>
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div><div class="card cell html-fill-item html-fill-container bslib-card" data-title="Sentimientos - OpenCritic" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-header"><div class="card-title"><span style="display: inline">
+Sentimientos - OpenCritic
+</span></div></div>
+<div class="card-body html-fill-item html-fill-container">
+<div class="cell-output-display html-fill-item html-fill-container">
+<img src="dashboard_resenas_steam_opencritic_files/figure-html/unnamed-chunk-14-1.png" class="img-fluid quarto-dashboard-img-contain">
+</div>
+</div>
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
+</div>
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-columns: minmax(3em, 1fr) minmax(3em, 1fr) minmax(3em, 1fr);
+grid-auto-rows: minmax(0, 1fr);">
+<div class="card cell html-fill-item html-fill-container bslib-card" data-title="Emociones NRC - OpenCritic" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-header"><div class="card-title"><span style="display: inline">
+Emociones NRC - OpenCritic
+</span></div></div>
+<div class="card-body html-fill-item html-fill-container">
+<div class="cell-output-display html-fill-item html-fill-container">
+<img src="dashboard_resenas_steam_opencritic_files/figure-html/unnamed-chunk-15-1.png" class="img-fluid quarto-dashboard-img-contain">
+</div>
+</div>
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div><div class="card cell html-fill-item html-fill-container bslib-card" data-title="Clasificación IA - OpenCritic" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-header"><div class="card-title"><span style="display: inline">
+Clasificación IA - OpenCritic
+</span></div></div>
+<div class="card-body html-fill-item html-fill-container">
+<div class="cell-output-display html-fill-item html-fill-container">
+<img src="dashboard_resenas_steam_opencritic_files/figure-html/unnamed-chunk-16-1.png" class="img-fluid quarto-dashboard-img-contain">
+</div>
+</div>
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div><div class="card cell html-fill-item html-fill-container bslib-card" data-title="Dispersión del índice IA - OpenCritic" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-header"><div class="card-title"><span style="display: inline">
+Dispersión del índice IA - OpenCritic
+</span></div></div>
+<div class="card-body html-fill-item html-fill-container">
+<div class="cell-output-display html-fill-item html-fill-container">
+<img src="dashboard_resenas_steam_opencritic_files/figure-html/unnamed-chunk-17-1.png" class="img-fluid quarto-dashboard-img-contain">
+</div>
+</div>
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
+</div>
+</div>
+</div>
+<div id="comparación-textual" class="dashboard-page tab-pane grid-skip html-fill-item html-fill-container" data-orientation="rows" aria-labelledby="tab-comparación-textual">
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-rows: minmax(3em, 50fr) minmax(3em, 50fr); grid-auto-columns: minmax(0, 1fr);">
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-columns: minmax(3em, 1fr) minmax(3em, 1fr);
+grid-auto-rows: minmax(0, 1fr);">
+<div class="card cell html-fill-item html-fill-container bslib-card" data-title="Emociones NRC comparadas" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-header"><div class="card-title"><span style="display: inline">
+Emociones NRC comparadas
+</span></div></div>
+<div class="card-body html-fill-item html-fill-container">
+<div class="cell-output-display html-fill-item html-fill-container">
+<img src="dashboard_resenas_steam_opencritic_files/figure-html/unnamed-chunk-18-1.png" class="img-fluid quarto-dashboard-img-contain">
+</div>
+</div>
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div><div class="card cell html-fill-item html-fill-container bslib-card" data-title="Promedio de palabras según clasificación IA" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-header"><div class="card-title"><span style="display: inline">
+Promedio de palabras según clasificación IA
+</span></div></div>
+<div class="card-body html-fill-item html-fill-container">
+<div class="cell-output-display html-fill-item html-fill-container">
+<img src="dashboard_resenas_steam_opencritic_files/figure-html/unnamed-chunk-19-1.png" class="img-fluid quarto-dashboard-img-contain">
+</div>
+</div>
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
+</div>
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-columns: minmax(3em, 1fr) minmax(3em, 1fr);
+grid-auto-rows: minmax(0, 1fr);">
+<div class="card cell html-fill-item html-fill-container bslib-card" data-title="Relación entre longitud e índice IA" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-header"><div class="card-title"><span style="display: inline">
+Relación entre longitud e índice IA
+</span></div></div>
+<div class="card-body html-fill-item html-fill-container">
+<div class="cell-output-display html-fill-item html-fill-container">
+<img src="dashboard_resenas_steam_opencritic_files/figure-html/unnamed-chunk-20-1.png" class="img-fluid quarto-dashboard-img-contain">
+</div>
+</div>
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div><div class="card cell html-fill-item html-fill-container bslib-card" data-title="Tabla general filtrable" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-header"><div class="card-title"><span style="display: inline">
+Tabla general filtrable
+</span></div></div>
+<div class="card-body html-fill-item html-fill-container">
+<div class="cell-output-display html-fill-item html-fill-container">
+<div class="datatables html-widget html-fill-item html-fill-container" id="htmlwidget-944de76940d56bb8df67" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-944de76940d56bb8df67">{"x":{"filter":"top","vertical":false,"filterHTML":"<tr>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"factor\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n    <div style=\"width: 100%; display: none;\">\n      <select multiple=\"multiple\" style=\"width: 100%;\" data-options=\"[&quot;Negativo&quot;,&quot;Neutral&quot;,&quot;Positivo&quot;]\"><\/select>\n    <\/div>\n  <\/td>\n  <td data-type=\"factor\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n    <div style=\"width: 100%; display: none;\">\n      <select multiple=\"multiple\" style=\"width: 100%;\" data-options=\"[&quot;Humano&quot;,&quot;Dudoso&quot;,&quot;Probable IA&quot;,&quot;Muy probable IA&quot;,&quot;Desconocido&quot;]\"><\/select>\n    <\/div>\n  <\/td>\n  <td data-type=\"number\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n    <div style=\"display: none;position: absolute;width: 200px;opacity: 1\">\n      <div data-min=\"1\" data-max=\"7\"><\/div>\n      <span style=\"float: left;\"><\/span>\n      <span style=\"float: right;\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"number\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n    <div style=\"display: none;position: absolute;width: 200px;opacity: 1\">\n      <div data-min=\"-4.2\" data-max=\"1\" data-scale=\"15\"><\/div>\n      <span style=\"float: left;\"><\/span>\n      <span style=\"float: right;\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"integer\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n    <div style=\"display: none;position: absolute;width: 200px;opacity: 1\">\n      <div data-min=\"1\" data-max=\"392\"><\/div>\n      <span style=\"float: left;\"><\/span>\n      <span style=\"float: right;\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"integer\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n    <div style=\"display: none;position: absolute;width: 200px;opacity: 1\">\n      <div data-min=\"1\" data-max=\"2172\"><\/div>\n      <span style=\"float: left;\"><\/span>\n      <span style=\"float: right;\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n<\/tr>","data":[["Steam","Steam","Steam","Steam","Steam","Steam","Steam","Steam","Steam","Steam","Steam","Steam","Steam","Steam","Steam","Steam","Steam","Steam","Steam","Steam","Steam","Steam","Steam","Steam","Steam","Steam","Steam","Steam","Steam","Steam","Steam","Steam","Steam","Steam","Steam","Steam","Steam","Steam","Steam","Steam","Steam","Steam","Steam","Steam","Steam","Steam","Steam","Steam","Steam","Steam","Steam","Steam","Steam","Steam","Steam","Steam","Steam","Steam","Steam","Steam","Steam","Steam","Steam","Steam","Steam","Steam","Steam","Steam","Steam","Steam","Steam","Steam","Steam","Steam","Steam","Steam","Steam","Steam","Steam","Steam","Steam","Steam","Steam","Steam","Steam","Steam","Steam","Steam","Steam","Steam","Steam","Steam","Steam","Steam","Steam","Steam","Steam","Steam","Steam","Steam","OpenCritic","OpenCritic","OpenCritic","OpenCritic","OpenCritic","OpenCritic","OpenCritic","OpenCritic","OpenCritic","OpenCritic","OpenCritic","OpenCritic","OpenCritic","OpenCritic","OpenCritic","OpenCritic","OpenCritic","OpenCritic","OpenCritic","OpenCritic","OpenCritic","OpenCritic","OpenCritic","OpenCritic","OpenCritic","OpenCritic","OpenCritic","OpenCritic","OpenCritic","OpenCritic","OpenCritic","OpenCritic","OpenCritic","OpenCritic","OpenCritic","OpenCritic","OpenCritic","OpenCritic","OpenCritic","OpenCritic","OpenCritic","OpenCritic","OpenCritic","OpenCritic","OpenCritic","OpenCritic","OpenCritic","OpenCritic","OpenCritic","OpenCritic","OpenCritic","OpenCritic","OpenCritic","OpenCritic","OpenCritic","OpenCritic","OpenCritic","OpenCritic","OpenCritic","OpenCritic","OpenCritic","OpenCritic","OpenCritic"],["Negativo","Positivo","Negativo","Neutral","Negativo","Negativo","Neutral","Neutral","Negativo","Negativo","Neutral","Negativo","Negativo","Negativo","Neutral","Neutral","Negativo","Negativo","Neutral","Negativo","Negativo","Negativo","Neutral","Negativo","Positivo","Negativo","Negativo","Neutral","Neutral","Neutral","Neutral","Neutral","Neutral","Neutral","Neutral","Neutral","Neutral","Neutral","Neutral","Neutral","Negativo","Neutral","Neutral","Neutral","Neutral","Neutral","Neutral","Neutral","Neutral","Neutral","Neutral","Neutral","Neutral","Neutral","Neutral","Neutral","Neutral","Positivo","Neutral","Neutral","Neutral","Neutral","Neutral","Neutral","Neutral","Neutral","Neutral","Neutral","Neutral","Neutral","Neutral","Positivo","Neutral","Negativo","Neutral","Positivo","Negativo","Neutral","Positivo","Neutral","Neutral","Neutral","Neutral","Neutral","Neutral","Neutral","Neutral","Neutral","Neutral","Neutral","Neutral","Positivo","Neutral","Neutral","Neutral","Negativo","Neutral","Neutral","Neutral","Neutral","Negativo","Negativo","Negativo","Negativo","Negativo","Negativo","Negativo","Negativo","Negativo","Negativo","Negativo","Negativo","Negativo","Negativo","Negativo","Neutral","Negativo","Negativo","Negativo","Negativo","Negativo","Negativo","Negativo","Negativo","Negativo","Neutral","Negativo","Negativo","Negativo","Negativo","Negativo","Negativo","Negativo","Negativo","Negativo","Positivo","Negativo","Negativo","Negativo","Positivo","Neutral","Negativo","Negativo","Neutral","Negativo","Negativo","Negativo","Neutral","Negativo","Negativo","Negativo","Negativo","Negativo","Negativo","Negativo","Negativo","Negativo","Negativo","Negativo","Negativo","Negativo","Negativo","Negativo"],["Dudoso","Dudoso","Dudoso","Dudoso","Dudoso","Dudoso","Dudoso","Dudoso","Dudoso","Dudoso","Humano","Humano","Humano","Humano","Humano","Humano","Humano","Humano","Humano","Humano","Humano","Humano","Humano","Humano","Humano","Humano","Humano","Humano","Humano","Humano","Humano","Humano","Humano","Humano","Humano","Humano","Humano","Humano","Humano","Humano","Humano","Humano","Humano","Humano","Humano","Humano","Humano","Humano","Humano","Humano","Humano","Humano","Humano","Humano","Humano","Humano","Humano","Humano","Humano","Humano","Humano","Humano","Humano","Humano","Humano","Humano","Humano","Humano","Humano","Humano","Humano","Humano","Humano","Humano","Humano","Humano","Humano","Humano","Humano","Humano","Humano","Humano","Humano","Humano","Humano","Humano","Humano","Humano","Humano","Humano","Humano","Humano","Humano","Humano","Humano","Humano","Humano","Humano","Humano","Humano","Humano","Dudoso","Dudoso","Dudoso","Probable IA","Dudoso","Dudoso","Dudoso","Dudoso","Dudoso","Dudoso","Dudoso","Probable IA","Dudoso","Probable IA","Humano","Humano","Humano","Humano","Dudoso","Dudoso","Dudoso","Dudoso","Dudoso","Probable IA","Humano","Humano","Dudoso","Dudoso","Dudoso","Dudoso","Dudoso","Dudoso","Dudoso","Dudoso","Dudoso","Dudoso","Probable IA","Probable IA","Probable IA","Probable IA","Probable IA","Probable IA","Probable IA","Dudoso","Dudoso","Dudoso","Dudoso","Dudoso","Dudoso","Probable IA","Dudoso","Probable IA","Dudoso","Dudoso","Dudoso","Dudoso","Dudoso","Dudoso","Dudoso","Dudoso","Dudoso","Dudoso"],[5,5,5,5,5,4,4,4,4,4,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,2,2,2,2,2,2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,3,4,5,5,7,5,4,5,5,5,5,5,7,5,7,2,3,3,3,5,5,5,5,5,7,3,3,4,5,5,5,5,5,5,5,5,5,7,7,7,7,7,7,7,4,5,5,5,5,5,7,5,7,5,5,5,5,5,5,4,5,5,5],[-0.25,1,-0.5,0,-4.2,-0.5,0,0,-0.25,-0.25,0,-1,-0.25,-0.25,0,0,-0.25,-0.25,0,-0.25,-0.25,-0.25,0,-0.25,0.5,-0.25,-0.25,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.75,0,0,0,0,0,0,0,0,0,0,0,0,0,0.5,0,-1,0,0.75,-0.25,0,0.75,0,0,0,0,0,0,0,0,0,0,0,0,0.5,0,0,0,-0.25,0,0,0,0,-1,-0.15,-0.75,-1.75,-1,-1.55,-0.75,-0.4,-1,-1.1,-1.5,-0.35,-0.75,-0.15,-0.25,0,-1,-0.75,-0.05000000000000004,-1,-0.35,-2.3,-1.5,-1.7,-0.75,0,-1.7,-1.5,-1.8,-0.9,-1,-1,-1,-0.5,-2.3,0.45,-0.4,-1,-0.75,0.35,0,-1,-0.75,0,-0.75,-0.4,-0.4,0,-0.15,-1,-0.75,-2.25,-1.15,-0.35,-1.35,-0.6,-1,-1,-1,-0.75,-0.4,-1,-1],[20,77,30,11,392,88,27,19,27,26,13,11,73,49,11,16,11,27,9,23,34,11,29,8,22,9,14,1,5,2,4,3,3,1,2,20,5,1,1,1,21,1,1,3,1,2,1,1,1,3,3,1,5,5,1,2,2,1,1,4,1,2,1,2,1,4,1,1,1,4,2,1,6,57,1,2,7,4,3,3,2,2,3,4,1,2,2,3,2,2,6,6,2,1,1,4,2,1,1,3,67,31,123,46,29,61,29,144,65,54,61,61,39,58,30,16,87,61,100,62,46,104,79,74,43,141,212,17,240,65,89,65,44,78,65,72,150,44,27,33,24,30,27,36,24,116,88,51,86,70,37,79,31,48,137,75,92,108,106,11,53,42,107],[82,431,146,62,2172,446,157,95,141,122,70,48,335,273,61,109,62,144,46,126,178,61,198,42,137,59,75,5,21,13,23,15,21,5,6,98,33,7,2,6,130,2,2,12,23,9,4,13,2,16,8,7,22,37,4,7,9,4,7,21,4,13,2,13,1,20,3,10,9,23,9,4,30,317,3,9,37,21,16,17,11,8,16,21,1,14,10,9,18,17,27,31,9,2,2,24,8,3,2,13,375,189,677,284,160,348,174,852,392,294,362,412,228,330,168,94,517,349,581,401,267,594,500,455,268,848,1264,103,1475,396,556,365,253,481,384,426,915,269,185,199,128,158,149,199,151,651,488,285,515,425,216,433,196,271,810,450,520,607,600,63,334,242,703],["amigo si tu pc no tiene mas de 128 de ram no lo compres te va andar como la mierda","Me lo baje por qué vi muchos videos divertidos y dije, este juego debe dar muchas risas! Pero la realidad es que no. Es el típico juego que es mas divertido verlo que jugarlo. La mecánica de pintar esta literalmente rota, el Angulo de cámara para mi gusto esta demasiado cerca, el sonido ambiental es malillo. Literalmente jugué 1h y vi que faltaba pulirlo mucho. Si esperabas un prophunt olvidate, no es ni de lejos tan divertido.","juego mal creado cuando me meto me saca con un anuncio que dice as sido reportado y no deja jugar no lo descarguen es solo un mal gasto de dinero\n","juego mal optimizado, me anda mejor el poppy playtime que esto","Sé que el juego para varios es bueno, pero esta es la última vez que me planteo conseguir un juego por el mero hecho de que es popular\n\nProp Hunt es un modo de juego que siempre me ha gustado muchísimo gracias a Garry's mod, pero como en este no había mucha gente jugando y hay otros juegos que son enteramente de este estilo pero nadie los juega, entonces fue como una lástima, ya que no encontraba donde jugar. Después salió esto, donde YouTube me recomendaba los vídeos y me entero del nombre, entonces lo compro, lo juego, me asqueo un poco y me voy\n\nMe pareció atractiva la mecánica de ser un monigote blanco y camuflarte pintándote la piel, pero la realidad es que el juego te agobia rápido. Te exige demasiada creatividad para decidir DÓNDE y CÓMO esconderte, así que al final, ver una silueta con brazos y piernas en una pared o un mueble es un Game Over asegurado porque resalta a la vista. Esos escondites perfectos donde nadie te encuentra parecen ideas que se te ocurren en un millón de años. Además, no puedes simplemente copiar los trucos de otros, porque aquí todo depende de tu habilidad con el pincel y el entorno. La clave está en lograr diseñar texturas complejas y \"romper\" tu silueta humana, algo que se vuelve muy difícil y estresante con la presión del cronómetro en contra\n\n[i]Mirá el tráiler y vas a notar cuan notorio es ser un monigote pintado sobre una superficie. Te cazo al instante[/i]\n\nPor último, el juego está muy mal optimizado gracias al Unreal Engine 5. He jugado fluidamente y con gráficos altos, títulos tales como Resident Evil 4 Remake, Devil May Cry 5, Dying Light 2, entre otros, pero sin embargo MECCHA CHAMELEON tiene caídas de FPS, se congela al cargar una partida y a veces me desconecta de los servidores. En principio pensé que era mi ordenador, hasta que leí más reseñas negativas y me enteré del motor gráfico que utiliza el juego\n\nEn fin... realmente prefiero volver a Garry's mod para jugar Prop Hunt. La compra fue mala y lo único que se podría corregir es el rendimiento, pero la muy alta habilidad que se te pide para jugar con otras personas, es estresante. Paso del juego, y de comprar títulos que se hacen de moda","Me gusta el juego y lo compre para saber que tan divertido es y si me llama la tencion con la ganas que tenia de jugar pero por el momento rechazo seguir jugando asta que el juego arregle los errores que algunas personas o la mayoria dicen mencionar algunas de ellas el cierra o crasheo o que pasa que a veces si no es la descarga de algun mod que puede ser imposible jugar BUGS Juegazo 8.6 ojala Un futuro el juego sea bueno y tenga Mas arreglos","Un juego muy divertido que te hace sacar tus dotes artisticos para poder ganar. Lo de que se puedan descargar mapas tambien hace mas divertida la experiencia","no me deja cambiar a la posicion que yo quiero, selecciono una posicion y se pone la que quiere","Me parece un buen juego pero con el único problema que veo es que tengas que buscar un servidor muy precariamente y no solo poner en búsqueda","muy muy muy buen juego no se por que la gente lo critica es muy divertido si lo juegas con tus amigos pasaras un buen rato","muy buen juego tiene mods gratis variedad de mapas y colores muy bueno","Juegazo con  o sin amigos te lo vas a pasar bien","ete jugo trata de ke eres un monito y te pintaaas y te camuflaas y y todo esooo pe pero pero cuando llega teniente yy se laba las manitas con aguita y jabon pinpon y y deja ciego a un tipo y se keda cieguito y le da mucha risita y y y nadie le le saluda cuando llega a el server y se enoja con su comunidad por no imterabtuar con eyos\n","Tiene que arreglar la búsqueda de servidores, no se puede buscar por nombre y las etiquetas son inútiles. El juego es divertido pero he estado más rato en total buscando el server que ha creado mi colega que jugando con el. Cambiaré la reseña a positiva cuando lo arreglen.","la genialidad de la gente para esconderse es la hostia! jeje\n","Controles muy bien optimizados muchas opciones facil de entender idea original muy recomendable por el precio","Divertido para jugar con amigos pero hay algunos fallos y bugs","este juego es muy bueno para jugar con amigos y todos los que lo juegan es muy buen juego aunque algunas personas se dicen malas palabras jajaja","es bueno pero se me queda trabado cuando entro","Es un juego muy entretenido para jugar con amigos, claro falta pulir las mecánicas del juego, pero por el precio lo vale todo.","Bueno para jugar con amigos,pero la optimizacion es pésima,ya que no todos en el grupo de amigos tiene una buena pc siempre hay uno con una pc papa pero fuera de eso es divertido","Un juego bastante divertido para estar con los amigos un rato","Está muy bueno el juego, como recomendación, deberían habilitar una opción dentro del pontado, para cambiar el tipo de pincel, hacer cosas como lineas finas, difuminandos, facilitar deegradado, etc.","es muy bueno aun con mi laptop recomendado","Un juego bastante entretenido y original. Me parece sublime que este tipo de mecánicas se implementen en juegos Indie. Una absoluta joya.","Divertido para jugar con amigos, faltan pulir algunas cosas","es muy divertido lo reconmiendo mucho mas con jugar con amigos o jugar solo","semen","Que risas de juego xD","Muy divertido","LOS CONTROLES SON DUROS","etsa bueno pero","ta bieeeeeeeeen chido","AURA\n","siu xd","GRAN JUEGO, aca se define entre los que son grandes pintores y los que no ven nada y son cazadores","muchos bugs en esta actualizacion","juegazo","si","todo\n\n","juego muy copado y ademas con los mapas especiales se vuelve un jugo muy divertido (pero nescesitas saber pintar para sobrevivir)\n","67","b\n","es la cabra\n","nasheardobuenardopolis\n","muy bueno","bien","MARAVILLOSO \n","si","es muy chhulooo\n","no se :3","juegazo","esta muy muy muy chulo","Juego para GENIOOOS!!!! del escondite","Mola","es god\n","muy bueno","good","locuraa","Mucho rata de ponzoña","goty","Muy divertido","67","muy divertido",".","*Se camufla*\nfiu fiu","bkn","buenjuego\n","divertido","libertad creativa a mil","muy bueno","nice","ESTA BUENO Y PESA 2 GIGABYTES\n","Lo mejor del juego es cuando estás convencido de que hiciste el camuflaje perfecto y llevas como 3 minutos sin que nadie te encuentre... hasta que aparece un tipo, te mira medio segundo y te elimina como si tuviera rayos X. Es de esos juegos que siempre terminan con todos riéndose o echándole la culpa al mapa.♥♥3333","god","very good","Es cutre pero es divertido con amigos","me gusta pintar jajaj","fun with friends","Pa pasalllla bien","ise crachea","ta weno\n","Es muy divertido","es tremendo el juego\n",".","esta buenisimo","está guapo","10 de 10\n","Excelente servicio","ess geniallllllll","hifdhi dfhf wshfd dieb  b d","ta copao, por los jajas... LIKE","me gustó\n","se","si","Es divertido con amigos.","ta chulo","god","Si","esta de pinga","Red Dead Redemption fue un gran juego cuando salió en 2010, y esto demuestra que seguirá siendo un gran juego en 2023. Si bien algunos clásicos de generaciones anteriores parecen anticuados, ese no es el caso aquí, y si te lo perdiste (o no estuviste presente) hace trece años, ahora es el momento de jugarlo finalmente. ¿Y si lo jugaras? Quizás sea hora de volver a jugarlo.","Red Dead Redemption sigue siendo uno de los mayores logros de Rockstar, ya que convierte la muerte del Viejo Oeste en un trágico e inolvidable viaje de violencia, redención y consecuencias.","En términos de precio, creo que vale la pena; pero dado el tiempo que ha pasado, debería ser algo un poco más barato a pesar de todo el trabajo que se ha puesto en ello. Red Dead Redemption es un fantástico spaghetti western en forma de videojuego que todavía existe, y solo es superado por el igualmente fantástico Red Dead Redemption 2 de 2018. En los 14 años de su lanzamiento, este sigue siendo un modelo de increíble diseño de mundo abierto a partir de sus personajes, misiones y cosas para hacer. Este no es un juego de nostalgia, sino de perseverancia en el tiempo. Red Dead Redemption sigue siendo una obra maestra y ahora finalmente se puede disfrutar al máximo en PC.","Red Dead Redemption es sin duda uno de los mejores y más impresionantes títulos de la generación Xbox 360 y PlayStation 3. Con una historia muy bien construida y, en cierto modo, incluso emotiva, el juego está marcado por personajes carismáticos, algunos de ellos bastante peculiares.","'Red Dead Redemption' es un juego que resistirá la prueba del tiempo pase lo que pase... Occidente siempre ocupará un lugar especial en mi corazón y en mi vida.","El precio, sin embargo, es literalmente lo único malo que puedo decir de la que es una de mis experiencias de juego favoritas de todos los tiempos. Puede que ahora sea un juego antiguo, pero ha envejecido como el buen vino. La jugabilidad es perfecta, la dirección de arte es impresionante y la historia tiene el mismo impacto emocional de siempre.","Red Dead Redemption PS4 pertenece a la categoría de juegos que te hacen preguntarte cómo juzgar una leyenda de esa época, conociendo los datos tecnológicos de la era moderna.","Red Dead Redemption es considerado uno de los juegos narrativos más destacados en la historia de la industria, ya que ofrecía un conmovedor viaje humano a través del personaje de John Marston y su intento de escapar de su pasado y salvar a su familia. El juego se caracterizó por un mundo vivo lleno de detalles, una escritura sólida y personajes inolvidables, junto con eventos conmovedores que hicieron que la experiencia quedara grabada en la mente de los jugadores hasta el día de hoy. A pesar de la existencia de algunos problemas como la repetición y los viajes excesivos, el juego sigue siendo una experiencia excepcional, especialmente en lo que respecta a los estándares técnicos y narrativos de 2010, lo que confirma el estatus de Rockstar Games como una de las mejores compañías de juegos en la entrega de historias y construcción de mundos.","Desde mejoras en la calidad de vida hasta experiencias de juego completamente nuevas, las modificaciones dan nueva vida a Red Dead Redemption, extendiendo su rejugabilidad mucho más allá del juego base. Combinada con tiempos de carga más rápidos y una estabilidad mejorada, la versión para PC se destaca como la mejor manera de explorar el viaje épico de John Marston a través de la frontera.","Red Dead Redemption es una obra maestra que perdura. Claro, es un poco tosco, y el precio de esta nueva versión parece un poco exagerado, pero lo que estás obteniendo es una pequeña y extraña experiencia basada en la historia de los juegos que rara vez se presenta en una forma tan sin filtrar.","Red Dead Redemption para PC es un testimonio del poder del diseño atemporal. Esta versión no sólo conserva la magia del original, sino que la mejora de manera significativa. La fluidez del framerate desbloqueado, la nitidez de la resolución 4K y las mejoras en la distancia de dibujo hacen de esta, sin duda, la mejor manera de experimentar este clásico moderno.","Su impecable remasterización es una excelente excusa para quienes deseen disfrutar de esta maravillosa, imponente e inolvidable aventura en su versión next-gen para PlayStation 5, portátil en Nintendo Switch o retrocompatible en Xbox Series X/S. Así como un primer acercamiento para quienes no disfrutaron de su obra original y desean ampliar la potente experiencia narrativa vivida tras 'Red Dead Redemption 2'.","Red Dead Redemption en Steam es una experiencia que está a la altura de las expectativas desde hace muchos años. Superando las expectativas de sus versiones originales de PS3 y Xbox 360, para ser la edición definitiva del juego.","Es indiscutible que Red Dead Redemption es una obra maestra, un western soberbio y uno de los mejores juegos de Rockstar. Si no lo has jugado, lo vas a disfrutar a lo grande. Pero al mismo tiempo, otros factores, como el precio o la ausencia de mejoras importantes, ensombrecen ligeramente lo que debería haber sido un gran debut.","Es una pena que no se haya puesto más esfuerzo en la conversión, porque el RDR original sigue siendo una obra maestra. Incluso con los defectos, vale la pena revisarlo.","¡Ponte las gastadas botas de John Marsten y experimenta el Salvaje Oeste en todo su esplendor!","Red Dead Redemption es una obra maestra del género de mundo abierto que combina una narración profunda con un mundo inmersivo y detallado.  El juego no sólo ofrece una experiencia rica en acción y aventuras sino también una fuerte reflexión sobre las decisiones que tomamos y sus consecuencias.  Un título que recomiendo a todos los jugadores y un claro hito en el desarrollo de los juegos modernos. La secuela (que en realidad es una precuela) Red Dead Redemption 2 es un excelente ejemplo de esta evolución. ¡Jugar!","Después de 14 años de su lanzamiento inicial en consolas, Red Dead Redemption finalmente llegó a PC, ¡y sigue siendo relevante! Y si no fuera por Red Dead Redemption 2, habría sido la mejor experiencia de acción y aventuras del Oeste del mercado. Así de bueno era y sigue siendo RDR, y así es como cualquier desarrollador debería diseñar sus juegos.","Red Dead Redemption tiene una historia memorable, personajes icónicos y una jugabilidad que dejó huella en una época dorada de las aventuras de acción y de Rockstar, quienes lograron extender sus alas más allá de la sombra de Grand Theft Auto. Su influencia perdura hasta estos días, ya que estoy aquí, 13 años después, hablando de su puerto Switch; por lo tanto, si tienes dudas sobre experimentar este clásico moderno, te recomiendo que al menos le des una oportunidad. ¿Quién sabe si no te emocionarás tanto que también saltarás a Red Dead Redemption 2 (si aún no lo has hecho)?","Lanzado hace casi 15 años, Red Dead Redemption continúa teniendo una influencia significativa en la industria del juego y sigue siendo un trabajo legendario que desafía la prueba del tiempo. Esta tan esperada edición para PC ofrece poco más que lo esencial para disfrutar plenamente de la experiencia original, aunque todavía sufre algunos problemas técnicos que esperamos se solucionen con el tiempo.","Mirando el panorama general, Red Dead Redemption ha recibido un port para PC de alta calidad que, aparte de su elevado precio, deja poco que criticar. El juego sigue siendo atractivo y vale la pena probarlo si nunca antes has experimentado este título en una consola.","Red Dead Redemption es un juego marcado por una excelente narrativa y unos diálogos sensacionales (la escena introductoria es un espectáculo en sí misma). Sin embargo, el precio algo elevado puede desanimar a los curiosos, después de todo, es un título de 2010 y no es ni The Legend of Zelda ni Mario, para animar a los propietarios de la consola de Nintendo a pagar el precio completo por él. Pero, por todo lo que fue y sigue siendo Red Dead Redemption, si lo haces, no te arrepentirás. El título es una gran incorporación al excelente catálogo de juegos del fenómeno llamado Nintendo Switch.","Red Dead Redemption sigue siendo un título histórico. El port Switch 2 mejora la presentación y el rendimiento sin cambiar el diseño central del juego, permitiendo que el mundo, la historia y la jugabilidad brillen como siempre debieron hacerlo. Existen signos menores de envejecimiento, pero no quitan la experiencia. Esta versión es una forma definitiva de experimentar un clásico, brindando todo lo que hizo grandioso al original mientras funciona de manera más fluida y luce más nítida que nunca.","Red Dead Redemption es un juego excepcional que consigue capturar el espíritu del Salvaje Oeste. El increíble diseño de sonido y la apasionante narrativa son los aspectos más destacados de la aventura. Aunque funciona perfectamente bien en Switch, la falta de un modo en línea y de contenido adicional es decepcionante. El alto precio es polémico, sin embargo, esta es una exquisita aventura de mundo abierto que muestra a Rockstar en su máxima expresión.","Red Dead Redemption para PC es una oportunidad de oro para revivir uno de los grandes clásicos de los juegos. Su poderosa narrativa, su atractiva jugabilidad y su vibrante mundo del Lejano Oeste continúan cautivando, incluso 14 años después de su lanzamiento original.","Si nunca has jugado a Red Dead Redemption, ¡ya era hora! Hay bastante que destacar gráficamente, pero tenemos que tener en cuenta que este es un juego de 2010. Llevarlo a un estándar de 2024 es todo un desafío, lo puedo entender. Así que no esperes calidad de Horizon Zero Dawn Remaster, porque el juego base es simplemente mucho más antiguo en ese sentido. La jugabilidad y el contenido siguen siendo sólidos, aunque parece un poco anticuado aquí y allá. La carrera, los saltos, la física, todo se siente y parece como si estuvieras jugando Grand Theft Auto III. Pero si estás buscando un juego que simplemente se juegue bien, tenga una buena historia y parezca lo suficientemente aceptable para estos tiempos, entonces Red Dead Redemption para PC, incluida la expansión, te mantendrá activo y te permitirá revivir muchas influencias occidentales.","¡La portabilidad de Red Dead Redemption finalmente está disponible para PC! Para muchos jugadores, la llegada de las aventuras de John Marston representa la captura de la mítica ballena blanca, y otros tantos habían perdido la esperanza de que el western de Rockstar aterrizara finalmente en ordenador. Es una lástima el precio de lanzamiento, ya que los 50 € cobrados por un juego de hace 14 años se habrían justificado mejor frente a un trabajo de restauración más sustancial. Sin embargo, finalmente podemos disfrutar de una de las grandes obras maestras de la historia de los videojuegos en PC, y esta es la noticia más importante. ¡La portabilidad de Red Dead Redemption finalmente está disponible para PC! Para muchos jugadores, la llegada de las aventuras de John Marston representa la captura de la mítica ballena blanca, y otros tantos habían perdido la esperanza de que el western de Rockstar aterrizara finalmente en ordenador. Es una lástima el precio de lanzamiento, ya que los 50 € cobrados por un juego de hace 14 años se habrían justificado mejor frente a un trabajo de restauración más sustancial. Sin embargo, por fin podemos disfrutar de una de las grandes obras maestras de la historia del videojuego en PC, y esta es la noticia más importante.","Red Dead Redemption finalmente llega a PC, ofreciendo la opción de jugar en \"Ultra HD\" sin compromisos.","A primera vista, los 50 euros que se cobran por la versión para PC de Red Dead Redemption son un precio elevado para un juego de hace 14 años que sólo ofrece algunas mejoras visuales y técnicas con respecto a la versión original. Si no conoces el original, definitivamente deberías adquirirlo: Red Dead Redemption es un punto culminante absoluto de la historia de los videojuegos que aún hoy entretiene con su apasionante historia, personajes inusuales y su humor inimitable. La atmósfera que el juego introduce en el mundo occidental virtual es incomparable e incluso si la tecnología se ha quedado atrás de los estándares actuales, la experiencia aún logra cautivar al jugador. Entonces, si tienes debilidad por los juegos de mundo abierto atmosféricos y bien contados, definitivamente obtendrás el valor de tu dinero aquí. Sin embargo, para aquellos que ya han jugado en la consola, la compra es menos recomendable. Las mejoras en la versión para PC, como una mayor resolución y un rendimiento más fluido, sólo justifican el precio por unos pocos. Sin embargo, si nunca has experimentado la inmensidad del Salvaje Oeste en Red Dead Redemption, entonces no hay mejor momento para ponerte al día. La expansión Undead Nightmare también aporta un soplo de aire fresco al juego y proporciona horas adicionales de entretenidas aventuras. En este sentido, el precio para los recién llegados está totalmente justificado, ya que se trata de un clásico que todavía sabe impresionar.","Red Dead Redemption, muchos años después, sigue siendo una maravilla para jugar y explorar. A pesar de no realizar ningún cambio en su modo de juego, aparte de la muy apreciada inclusión del DLC Undead Nightmare, Rockstar logra recuperar los viejos recuerdos de este juego excepcional gracias a un puerto muy estable, que brinda a todos la oportunidad de experimentar la historia de John Marston.","Red Dead Redemption para PC es la mejor edición de las aventuras de John Marston que uno puede jugar. En términos de música e historia, excelente, gráficamente se queda corto en comparación con los títulos modernos, pero en términos de jugabilidad, sigue siendo excepcionalmente divertido. Es un western brillante, que provoca carcajadas y lágrimas, y al mismo tiempo aborda hábilmente muchos temas como el racismo, la inmigración y los derechos humanos. Una historia hermosa y personal en el Salvaje Oeste que poco a poco se está volviendo más civilizado.","Red Dead Redemption es una experiencia increíble y es uno de esos juegos que definió una generación de títulos de mundo abierto donde la narración a nivel de película se entrelazaba con la acción que podías controlar. Si ya lo jugaste, no te perderás nada, pero si estabas buscando una excusa para ver de qué se trataba todo el revuelo, espera primero a una oferta.","Aunque la jugabilidad lenta y la acción que no responde siempre han sido cuestionables, con la mentalidad adecuada, es posible adaptarse a su factor de basura. Vale la pena aclimatarse a ellos porque Red Dead Redemption es más que la suma de sus partes.","Red Dead Redemption es aclamado como uno de los mejores juegos jamás creados, al igual que su secuela, y este es un fuerte recordatorio de por qué. Ha envejecido brillantemente y es fácilmente un juego que sugeriría que todos deberían jugar. Lamentablemente, la falta de modo multijugador y el precio más alto parecen ser puntos conflictivos para algunos. Pero con la gran cantidad de contenido y calidad, todavía ofrece un valor razonable para una experiencia de juego imperdible.","Red Dead Redemption en Switch es una buena adaptación de un gran juego. Si te mueres por volver a jugarlo o no lo has visto antes, deberías hacerlo, pero aquellos que ya hayan explorado por completo el viejo oeste no encontrarán nada nuevo aquí ni muchas razones para comprarlo nuevamente fuera del factor portátil. Para algunos, sin embargo, ese será todo el incentivo que necesitan.","Red Dead Redemption es realmente divertido en PS4 y Nintendo Switch. Después de trece años, el clásico de Rockstar se mantiene como ningún otro, y estos ajustes son más que suficientes para una experiencia muy satisfactoria. A muchos de nosotros nos hubiera gustado algo más, pero tanto para los nostálgicos como para los nuevos fans de la saga, este port es una oportunidad fantástica para ponerse en la piel de John Marston.","Red Dead Redemption en Switch es una adaptación sencilla de la obra maestra de 2010 sin campanas ni silbidos adicionales por un precio bastante alto. Si puedes superar eso, este es un juego que recomendamos encarecidamente profundizar, especialmente si aún no lo has experimentado. La epopeya occidental de Rockstar se mantiene sorprendentemente bien, su historia es tan poderosa como siempre, su acción trepidante todavía se siente genial y se ve y se juega perfectamente bien en la consola de Nintendo. Se ha eliminado el modo multijugador, lo cual es una eliminación dolorosa pero comprensible, y realmente nos hubiera gustado que se hiciera un esfuerzo para agregar controles giroscópicos o retocar un poco los gráficos, pero es lo que es. Este es un verdadero juego de todos los tiempos adaptado con éxito a Switch y, si puedes gastar el dinero, te lo pasarás genial aquí independientemente de la falta de TLC.","Red Dead Redemption es un juego excepcional y su versión para PC lo cumple con creces, ya que ofrece una experiencia bien optimizada incluso para dispositivos menos potentes. Aun así, se echan en falta algunos añadidos o mejoras sustanciales tras tantos años de espera.","Por fin, después de catorce años, Red Dead Redemption también llega a PC. El título ha envejecido muy bien, lamentablemente esta conversión trae consigo innumerables problemas técnicos.","Este western de culto lleva mucho tiempo ausente del PC, aunque su secuela se estrenó hace unos años. Rockstar finalmente lo lanzó en esta plataforma, pero con gráficos obsoletos y un precio elevado.","El lado positivo aquí es que ahora el juego finalmente se ha liberado de la jaula del hardware antiguo. Y eso es algo grandioso.","Red Dead Redemption es un juego excelente con un reenvasado un poco perezoso. Si aún no lo has jugado, adelante, pero por lo demás, no hay mucho para ti aquí.","Red Dead Redemption en Switch es exactamente la misma epopeya occidental que conoces y amas. Ésa es a la vez su mayor fortaleza y su mayor debilidad.","No es nada especial o innovador para destacar. No hay nuevas adiciones a la historia, pero creo que es un gran juego para aprender si quieres vagar por lo que queda del oeste salvaje mientras puedas.","Red Dead Redemption ciertamente ha envejecido como un buen vino, aún conserva su juego satisfactorio y un enorme y hermoso salvaje oeste para explorar.","En su forma original, Red Dead Redemption es casi perfecto en todos sus aspectos clave, como la narrativa, la jugabilidad y el concepto artístico. La remasterización de PS4 de 2023 fue tímida a la hora de actualizar la definición y el rendimiento, pero hizo lo suficiente para presentarla a una nueva generación y llenar un vacío para los fanáticos de toda la vida. Todo ello lo confirma ahora la versión nativa de PlayStation 5, con su 4K a 60fps con HDR, cosas que parecen poco -y en cierto modo lo son- pero que al menos ofrecen la experiencia más sólida, bonita y estable posible para uno de los grandes clásicos de la historia de los videojuegos.","Calificar el port para PC de Red Dead Redemption resultó ser un proceso doloroso para mí. Por un lado, tienes una versión básica pero sólida de uno de los juegos más solicitados y mejor valorados de todos los tiempos. Por otro lado, el precio del port para PC es uno de los más atroces de este año. Lo que es aún peor es el total desprecio de Rockstar por los precios regionales. Con los precios actuales, no puedo, en conciencia, recomendar Red Dead Redemption a nuestra audiencia india.","Si jugaste el juego en 2010 y tienes buenos recuerdos y tienes 50 dólares para desperdiciar, entonces hazlo, ya que el juego es tan bueno como lo recuerdas. Pero si tienes un presupuesto limitado, hay juegos nuevos y mejores en los que puedes gastar el dinero que tanto te costó ganar.","La versión de Rockstar de Red Dead Redemption para Playstation 4 y Nintendo Switch brinda una oportunidad tanto para los recién llegados como para los fanáticos de experimentar una de las aventuras más memorables de los juegos una vez más. Si bien hay algunas mejoras en las imágenes y el rendimiento, los restos de la antigüedad del juego aún se traslucen. Si puede pasar por alto el precio escandaloso y el contenido recortado, entonces definitivamente vale la pena emprender su viaje de regreso al Salvaje Oeste.","El puerto Switch de Red Dead Redemption es una forma fiel de adentrarte en el mundo de Red Dead. Se ve bien siempre que ajuste las expectativas y considere la antigüedad del juego, y funciona consistentemente bien tanto en el modo portátil como en el acoplado. Si bien muchos aspectos pueden parecer anticuados, todavía me divertí explorando el viejo oeste con John durante los últimos suspiros de la frontera estadounidense.","Aunque no es la versión esperada por muchos jugadores, Red Dead Redemption demuestra solidez como uno de los mejores juegos de todos los tiempos. La versión 2023 es la opción más estable, pero podría ser mucho mejor.","Sin duda, Red Dead Redemption es un juego más que fantástico que supone un excelente añadido, sobre todo en Switch, pero el precio de venta de 50 euros es demasiado para un port tan sencillo y que deja un regusto amargo. Si el precio no es un problema para ti, entonces este es un gran juego. Afortunadamente, no se ha convertido en un fiasco como la trilogía de GTA, pero la próxima vez preferiríamos ver una nueva versión completa.","Al llegar a PC después de años, Red Dead Redemption fue decepcionante con gráficos obsoletos y un precio elevado. Rockstar parece haber presentado el juego con el mínimo esfuerzo sin actualizarlo.","El debut de Red Dead Redemption en la generación actual mejora mucho la experiencia original, pero no es suficiente para que sea digno de los sistemas en los que se ejecuta. Aunque es la forma definitiva de jugar, este es un título que merecía una nueva versión completa.","Incluso después de 14 años, Red Dead Redemption sigue siendo un buen ejemplo de cómo hacer un western adecuado en forma de videojuego. La aventura principal está más centrada que la secuela debido al reparto relativamente más pequeño y al alcance de tus viajes, pero también hay muchas misiones secundarias que hacen que valga la pena desviarse de la línea de misiones principal. Undead Nightmare sigue siendo uno de los mejores juegos de zombies que existen y todavía se siente distinto después de todos estos años. Sólo desearías que se hubiera trabajado más en los gráficos además de agregar HDR y aumentar el brillo, especialmente porque están cobrando $50 por un puerto de 14 años. Todavía vale la pena agregar el juego a tu biblioteca, pero es posible que quieras esperar a obtener un muy buen descuento.","A pesar de sus defectos de juego, Red Dead Redemption es un clásico en las consolas de séptima generación. Sus personajes y guión bien elaborados se encuentran entre los mejores de la época. Es una maravilla tecnológica con una meticulosa atención al detalle. Si bien la jugabilidad puede requerir una adaptación por parte del jugador, vale la pena porque la experiencia general de Red Dead Redemption es mayor que la suma de sus partes individuales.","Si bien Red Dead Redemption es una obra maestra espectacular por sí sola, su versión para PlayStation 4 apenas aporta nada nuevo a la mesa con un precio elevado. Si bien es una gran oportunidad perdida después de una espera de una década, es bueno que los sistemas más modernos, además de las consolas Xbox, finalmente puedan reproducir esta obra de arte. En cuanto a la recomendación, debes adquirirla mientras esté a la venta o esperar los posibles puertos para PC y PS5 que puedan llegar a las tiendas el próximo año.","Este juego ha envejecido mucho. Aunque me divertí con Red Dead Redemption, no puedo evitar pensar que esto está un poco por debajo del promedio de lo que esperamos de un título de 2023 que se lanzará a un precio ridículamente superior. Tener esto en movimiento, si bien es un concepto novedoso, es un poco perjudicial para su trama y estructura épicas, parecidas a las de una película. Esto se beneficia al jugarse en una pantalla más grande y, al hacerlo, se ve un poco peor. Sin mencionar el hecho de que sus controles y su física son simplemente demasiado torpes, incluso para los estándares de Xbox 360.","En general, después de todos estos años, Red Dead Redemption sigue siendo un gran juego que ofrece a los jugadores una narrativa convincente, un mundo abierto fantástico y, en general, una experiencia de juego muy atractiva. Sin embargo, el port de PS4 no es algo que pueda recomendarse fácilmente a aquellos que ya jugaron el juego y su DLC o incluso poseen el paquete original, al menos al precio actual. Como tal, si nunca has jugado y todavía estás interesado en el puerto, te recomiendo esperar una oferta o comprar el puerto Switch, ya que eso al menos ofrece el valor de jugar sobre la marcha.","La conclusión aquí es que Red Dead Redemption merece mucho más.","Solo pasaron 14 años, pero Red Dead Redemption finalmente está disponible para PC. Si bien la embriagadora mezcla de Sam Peckinpah, Clint Eastwood y Blood Meridian sigue siendo superlativa en algunos lugares, el tiempo no ha tratado con amabilidad todos los aspectos del gran western de Rockstar. Este podría ser solo para finalistas.","Aunque tenía ganas de jugar Red Dead Redemption después de jugarlo, creo que hubiera sido mejor con una remasterización. Tal vez sea por las grandes mejoras que disfruté en Red Dead Redemption 2, pero no lo encontré tan divertido como en PS3.","Red Dead Redemption impresiona trece años después y sigue ofreciendo una excelente narración, misiones divertidas y una apasionante aventura cinematográfica de principio a fin. Double Eleven ha hecho magia y ha proporcionado un puerto prácticamente perfecto para Nintendo Switch que es, en su mayor parte, una recreación similar y, en algunos casos, mejor que nunca. El modo multijugador eliminado, la falta de características específicas de Switch y un precio más alto de lo esperado pueden disuadir a algunos jugadores, pero con una velocidad de fotogramas estable y efectos visuales sorprendentes y vívidos, la oportunidad de jugar como John Marston en cualquier lugar es una propuesta muy tentadora."]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>fuente<\/th>\n      <th>clase<\/th>\n      <th>clasificacionIA<\/th>\n      <th>indice_ia<\/th>\n      <th>sentimiento<\/th>\n      <th>palabras<\/th>\n      <th>caracteres<\/th>\n      <th>texto<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"bPaginate":false,"dom":"ifrt","language":{"info":"Showing _TOTAL_ entries"},"pageLength":8,"scrollX":true,"columnDefs":[{"className":"dt-right","targets":[3,4,5,6]},{"name":"fuente","targets":0},{"name":"clase","targets":1},{"name":"clasificacionIA","targets":2},{"name":"indice_ia","targets":3},{"name":"sentimiento","targets":4},{"name":"palabras","targets":5},{"name":"caracteres","targets":6},{"name":"texto","targets":7}],"order":[],"autoWidth":false,"orderClasses":false,"orderCellsTop":true,"lengthMenu":[8,10,25,50,100]}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
+</div>
+</div>
+</div>
+<div id="nubes-de-palabras" class="dashboard-page tab-pane grid-skip html-fill-item html-fill-container" data-orientation="rows" aria-labelledby="tab-nubes-de-palabras">
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-rows: minmax(3em, 50fr); grid-auto-columns: minmax(0, 1fr);">
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-columns: minmax(3em, 1fr) minmax(3em, 1fr);
+grid-auto-rows: minmax(0, 1fr);">
+<div class="card cell html-fill-item html-fill-container bslib-card" data-title="Nube de palabras - Steam" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-header"><div class="card-title"><span style="display: inline">
+Nube de palabras - Steam
+</span></div></div>
+<div class="card-body html-fill-item html-fill-container">
+<div class="cell-output-display html-fill-item html-fill-container">
+<img src="dashboard_resenas_steam_opencritic_files/figure-html/unnamed-chunk-22-1.png" class="img-fluid quarto-dashboard-img-contain">
+</div>
+</div>
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div><div class="card cell html-fill-item html-fill-container bslib-card" data-title="Nube de palabras - OpenCritic" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-header"><div class="card-title"><span style="display: inline">
+Nube de palabras - OpenCritic
+</span></div></div>
+<div class="card-body html-fill-item html-fill-container">
+<div class="cell-output-display html-fill-item html-fill-container">
+<img src="dashboard_resenas_steam_opencritic_files/figure-html/unnamed-chunk-23-1.png" class="img-fluid quarto-dashboard-img-contain">
+</div>
+</div>
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
+</div>
+</div>
+</div>
+<div id="notas-metodologicas" class="dashboard-page tab-pane grid-skip html-fill-item html-fill-container" data-orientation="rows" aria-labelledby="tab-notas-metodologicas">
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-rows: minmax(3em, 1fr); grid-auto-columns: minmax(0, 1fr);">
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-columns: minmax(3em, 1fr);
+grid-auto-rows: minmax(0, 1fr);">
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-rows: minmax(3em, max-content); grid-auto-columns: minmax(0, 1fr);">
+<div class="card html-fill-item html-fill-container bslib-card" data-fill="false" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-body html-fill-item html-fill-container">
+<p>En este dashboard comparamos dos fuentes de reseñas: <strong>Steam</strong> y <strong>OpenCritic</strong>. Primero limpiamos los textos eliminando signos, números y palabras vacías. Luego se calculan frecuencias de palabras, clasificación de sentimiento, emociones NRC, longitud textual e índice de posible IA.</p>
+<p>La variable <strong>sentimiento</strong> se obtiene con <code>get_sentiment()</code> del paquete <code>syuzhet</code>. Los valores positivos se clasifican como <strong>Positivo</strong>, los negativos como <strong>Negativo</strong> y los iguales a cero como <strong>Neutral</strong>.</p>
+<p>La variable <strong>clasificacionIA</strong> usa el índice <code>indice_ia</code> en escala de 1 a 10:</p>
+<ul>
+<li><strong>Humano</strong>: menor a 4.</li>
+<li><strong>Dudoso</strong>: de 4 a menos de 6.</li>
+<li><strong>Probable IA</strong>: de 6 a menos de 8.</li>
+<li><strong>Muy probable IA</strong>: 8 o más.</li>
+</ul>
+<p>Esta interpretacion de indices debe hacerse con cuidado: el índice IA no prueba por sí solo que una reseña fue escrita por inteligencia artificial, sino que sirve como una señal exploratoria para comparar patrones de escritura.</p>
+</div>
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
+<div id="3ade8a4a-fb1d-4a6c-8409-ac45482d5fc9" class="hidden html-fill-item html-fill-container">
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /container fluid -->
+
+<script type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (_event) {
+  if (window.bslib.Card) {
+    window.bslib.Card.initializeAllCards();
+  }
+}); 
+</script>
+  
+
+
+
+</body></html>
