@@ -15,7 +15,7 @@
 <ul>
   <li>Almonacid Quispe, Jimmy Salomón (patatita1theoriginal) (20241374) </li>
   <li>Santillan Santa Cruz, Alex Josept (jois_2003) (20241402) </li>
-  <li>[Apellidos, Nombres] ([usuario_github]) ([código_estudiante]) </li>
+  <li>Perez Cardenas, Jhordan Oswaldo  (20240727-JPC) (20240727) </li>
 </ul>
 
 <h2>Objetivo general</h2>
@@ -26,7 +26,7 @@
   <li><b>Fase 1: Recopilación y Estructuración de Datos (Extracción)</b>
     <ul>
       <li>Diseñar y ejecutar módulos de recolección de datos (vía API o web scraping) para extraer masivamente reseñas de usuarios y críticos desde Steam y OpenCritic.</li>
-      <li>Clasificar los metadatos asociados a cada reseña (fecha de publicación, tiempo de juego registrado, historial del revisor).</li>
+      <li>Clasificar los metadatos asociados a cada reseña (fecha de publicación, tiempo de juego registrado, recomendaciones/puntaje dado).</li>
     </ul>
   </li>
   <li><b>Fase 2: Procesamiento de Lenguaje Natural (Análisis Lingüístico)</b>
@@ -37,14 +37,14 @@
   </li>
   <li><b>Fase 3: Triangulación de Metadatos (Validación de Comportamiento)</b>
     <ul>
-      <li>Correlacionar el análisis lingüístico con las métricas de la plataforma para identificar anomalías. Por ejemplo: reseñas extremadamente detalladas contrastadas con tiempos de juego ínfimos (en Steam), o picos inusuales de reseñas de usuarios recién creados (en OpenCritic).</li>
+      <li>Correlacionar el análisis lingüístico con las métricas de la plataforma para identificar anomalías. Por ejemplo: reseñas extremadamente detalladas contrastadas con tiempos de juego ínfimos (en Steam), o reseñas inusuales de usuarios (en OpenCritic).</li>
       <li>Filtrar y aislar el comportamiento atípico asociado a granjas de bots o campañas de review bombing.</li>
     </ul>
   </li>
   <li><b>Fase 4: Modelado y Visualización (Generación del Índice)</b>
     <ul>
       <li>Formular un algoritmo que asigne un peso de fiabilidad a cada reseña basándose en los filtros anteriores.</li>
-      <li>Calcular un "Índice de Confianza" final para cada videojuego que refleje su verdadera recepción pública, descontando el ruido generado por la manipulación.</li>
+      <li>Calcular un "Índice IA" final para cada videojuego que refleje su verdadera recepción pública, descontando el ruido generado por la manipulación.</li>
     </ul>
   </li>
 </ul>
