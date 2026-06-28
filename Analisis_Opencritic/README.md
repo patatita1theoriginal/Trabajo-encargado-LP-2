@@ -8,317 +8,317 @@ Este documento centraliza el código para el análisis de sentimientos y detecci
     {
         "medio": "Eternal Games",
         "puntuacion": 90,
-        "comentario": "Red Dead Redemption is considered one of the most prominent narrative games in the history of the industry, as it offered a touching human journey through the character of John Marston and his attempt to escape his past and save his family. The game was characterized by a living world full of details, strong writing, and unforgettable characters, alongside moving events that made the experience stuck in players' minds until today. Despite the existence of some problems such as repetition and excessive travel, the game remains an exceptional experience, especially regarding the technical and narrative standards of 2010, confirming Rockstar Games' status as one of the best gaming companies in delivering stories and world-building."
+        "comentario": "Red Dead Redemption es considerado uno de los juegos narrativos más destacados en la historia de la industria, ya que ofreció un conmovedor viaje humano a través del personaje de John Marston y su intento de escapar de su pasado y salvar a su familia. El juego se caracterizó por un mundo vivo lleno de detalles, una escritura sólida y personajes inolvidables, junto con eventos conmovedores que han hecho que la experiencia permanezca en la mente de los jugadores hasta hoy. A pesar de la existencia de algunos problemas como la repetición y los viajes excesivos, el juego sigue siendo una experiencia excepcional, especialmente considerando los estándares técnicos y narrativos de 2010, confirmando el estatus de Rockstar Games como una de las mejores compañías de videojuegos en la entrega de historias y construcción de mundos."
     },
     {
         "medio": "Game8",
         "puntuacion": 84,
-        "comentario": "Red Dead Redemption remains a landmark title. The Switch 2 port improves presentation and performance without changing the game’s core design, letting the world, story, and gameplay shine like they were always meant to. Minor signs of aging exist, but they don’t take away from the experience. This version stands as a definitive way to experience a classic, delivering everything that made the original great while running smoother and looking sharper than ever."
+        "comentario": "Red Dead Redemption sigue siendo un título histórico. El port para Switch mejora la presentación y el rendimiento sin cambiar el diseño central del juego, permitiendo que el mundo, la historia y la jugabilidad brillen como siempre debieron hacerlo. Existen pequeñas señales de envejecimiento, pero no restan valor a la experiencia. Esta versión se erige como una forma definitiva de experimentar un clásico, ofreciendo todo lo que hizo grande al original mientras funciona de manera más fluida y se ve más nítida que nunca."
     },
     {
         "medio": "PSX Brasil",
         "puntuacion": 75,
-        "comentario": "In its original form, Red Dead Redemption is nearly perfect in all its key aspects, such as narrative, gameplay, and artistic concept. The 2023 PS4 remaster was timid in updating definition and performance, but did enough to introduce it to a new generation and fill a gap for longtime fans. All of this is now confirmed by the native PlayStation 5 version, with its 4K at 60fps with HDR, things that seem like little - and in a way, they are - but which at least offer the most solid, beautiful, and stable experience possible for one of the greatest classics in gaming history."
+        "comentario": "En su forma original, Red Dead Redemption es casi perfecto en todos sus aspectos clave, como la narrativa, la jugabilidad y el concepto artístico. El remaster de PS4 de 2023 fue tímido al actualizar la definición y el rendimiento, pero hizo lo suficiente para introducirlo a una nueva generación y llenar un vacío para los fanáticos de toda la vida. Todo esto ahora es confirmado por la versión nativa de PlayStation 5, con sus 4K a 60fps con HDR, cosas que parecen poco —y en cierto modo lo son— pero que al menos ofrecen la experiencia más sólida, hermosa y estable posible para uno de los mayores clásicos en la historia de los videojuegos."
     },
     {
         "medio": "GamingBolt",
         "puntuacion": 70,
-        "comentario": "Red Dead Redemption's current-gen debut does a lot to improve on the original experience, but it isn't enough to make this one worthy of the systems it's running on. Although it is the definitive way to play the game, this is a title that deserved a full-fledged remake."
+        "comentario": "El debut de Red Dead Redemption en la generación actual hace mucho por mejorar la experiencia original, pero no es suficiente para hacer que este título sea digno de los sistemas en los que se ejecuta. Aunque es la forma definitiva de jugar el juego, es un título que merecía un remake completo."
     },
     {
         "medio": "TestingBuddies",
         "puntuacion": 80,
-        "comentario": "At first glance, the 50 euros charged for the PC port of Red Dead Redemption is a hefty price for a 14-year-old game that only offers a few visual and technical improvements over the original version. If you don't know the original, you should definitely pick it up - Red Dead Redemption is an absolute highlight of gaming history that still entertains today with its gripping story, unusual characters and inimitable humor. The atmosphere that the game introduces into the virtual western world is incomparable and even if the technology has fallen behind current standards, the experience still manages to captivate the player. So if you have a soft spot for well-told, atmospheric open-world games, you will definitely get your money's worth here. For those who have already played the game on the console, however, the purchase is less recommendable. The improvements in the PC version, such as the higher resolution and smoother performance, only justify the price for a few. However, if you have never experienced the vastness of the Wild West in Red Dead Redemption, then there is hardly a better time to catch up. The Undead Nightmare expansion also brings a breath of fresh air to the game and provides additional hours of entertaining adventures. In this respect, the price for newcomers is entirely justified, as this is a classic that still knows how to impress."
+        "comentario": "A primera vista, los 50 euros cobrados por el port para PC de Red Dead Redemption es un precio elevado para un juego de hace 14 años que solo ofrece unas pocas mejoras visuales y técnicas sobre la versión original. Si no conoces el original, definitivamente deberías adquirirlo: Red Dead Redemption es un punto culminante absoluto de la historia de los juegos que aún entretiene hoy en día con su historia apasionante, personajes inusuales y humor inimitable. La atmósfera que el juego introduce en el mundo virtual del oeste es incomparable y, aunque la tecnología se haya quedado atrás respecto a los estándares actuales, la experiencia aún logra cautivar al jugador. Así que, si tienes debilidad por los juegos de mundo abierto bien contados y atmosféricos, definitivamente valdrá la pena tu dinero. Sin embargo, para aquellos que ya han jugado el juego en consola, la compra es menos recomendable. Las mejoras en la versión de PC, como la resolución más alta y un rendimiento más fluido, solo justifican el precio para unos pocos. Sin embargo, si nunca has experimentado la inmensidad del Salvaje Oeste en Red Dead Redemption, difícilmente hay un mejor momento para ponerse al día. La expansión Undead Nightmare también trae un soplo de aire fresco al juego y proporciona horas adicionales de aventuras entretenidas. En este sentido, el precio para los recién llegados está totalmente justificado, ya que es un clásico que aún sabe cómo impresionar."
     },
     {
         "medio": "Pizza Fria",
         "puntuacion": 84,
-        "comentario": "Red Dead Redemption for PC is a golden opportunity to relive one of gaming's greatest classics. Its powerful narrative, engaging gameplay, and vibrant Wild West world continue to captivate, even 14 years after its original release."
+        "comentario": "Red Dead Redemption para PC es una oportunidad de oro para revivir uno de los mayores clásicos de los videojuegos. Su poderosa narrativa, jugabilidad atractiva y el vibrante mundo del Salvaje Oeste continúan cautivando, incluso 14 años después de su lanzamiento original."
     },
     {
         "medio": "SpaceNerd.it",
         "puntuacion": 80,
-        "comentario": "Red Dead Redemption, many years later, is still a wonder to play and explore. Despite making zero changes to its gameplay, apart from the much appreciated inclusion of the Undead Nightmare DLC, Rockstar successfully manages to bring back the good old memories of this exceptional game thanks to a very stable port, giving everyone the chance to experience the tale of John Marston."
+        "comentario": "Red Dead Redemption, muchos años después, sigue siendo una maravilla para jugar y explorar. A pesar de no realizar cambios en su jugabilidad, aparte de la muy apreciada inclusión del DLC Undead Nightmare, Rockstar logra con éxito traer de vuelta los buenos recuerdos de este juego excepcional gracias a un port muy estable, dando a todos la oportunidad de experimentar la historia de John Marston."
     },
     {
         "medio": "KonsoliFIN",
         "puntuacion": 60,
-        "comentario": "It only took 14 years, but Red Dead Redemption is finally out on PC. While the heady mix of Sam Peckinpah, Clint Eastwood, and Blood Meridian is still superlative in places, time hasn't treated all aspects of Rockstar's great western kindly. This one might be for completionists only."
+        "comentario": "Solo tomó 14 años, pero Red Dead Redemption finalmente está disponible en PC. Si bien la mezcla embriagadora de Sam Peckinpah, Clint Eastwood y Blood Meridian sigue siendo superlativa en algunos puntos, el tiempo no ha tratado bien a todos los aspectos del gran western de Rockstar. Este puede ser solo para completistas."
     },
     {
         "medio": "Echo Boomer",
         "puntuacion": 80,
-        "comentario": "Red Dead Redemption finally arrives on PC, offering the option to play in \"Ultra HD\" without compromises."
+        "comentario": "Red Dead Redemption finalmente llega a PC, ofreciendo la opción de jugar en \"Ultra HD\" sin compromisos."
     },
     {
         "medio": "GameOnly",
         "puntuacion": 80,
-        "comentario": "Red Dead Redemption on PC is the best edition of John Marston's adventures one can play. In terms of music and story — excellent, graphically it falls short compared to modern titles, but in terms of gameplay, it remains exceptionally enjoyable. It's a brilliant western, causing both bursts of laughter and tears, while also skillfully addressing many issues like racism, immigration, and human rights. A beautiful, personal story in the Wild West that's slowly getting more civilized."
+        "comentario": "Red Dead Redemption en PC es la mejor edición de las aventuras de John Marston que uno puede jugar. En términos de música e historia, es excelente; gráficamente se queda corta en comparación con los títulos modernos, pero en términos de jugabilidad, sigue siendo excepcionalmente disfrutable. Es un western brillante que provoca tanto carcajadas como lágrimas, mientras aborda hábilmente muchos problemas como el racismo, la inmigración y los derechos humanos. Una historia hermosa y personal en el Salvaje Oeste que se está volviendo lentamente más civilizado."
     },
     {
         "medio": "Gamepressure",
         "puntuacion": 80,
-        "comentario": "Red Dead Redemption is an amazing experience and is one of those games that defined a generation of open-world titles where movie-level storytelling weaved into the action you got to control. If you’ve already played it, you won’t miss anything, but if you were looking for an excuse to see what the hype was all about, wait for a sale first."
+        "comentario": "Red Dead Redemption es una experiencia increíble y uno de esos juegos que definió a una generación de títulos de mundo abierto donde la narrativa a nivel cinematográfico se entrelazaba con la acción que podías controlar. Si ya lo has jugado, no te perderás nada, pero si buscabas una excusa para ver de qué trataba todo el entusiasmo, espera a una rebaja primero."
     },
     {
         "medio": "Digital Chumps",
         "puntuacion": 77,
-        "comentario": "It's nothing special to groundbreaking to write home on. There isn't any new story additions, but I do think it's a great game to pick up if you want to roam what is left of the untamed west while you still can."
+        "comentario": "No es nada especialmente rompedor. No hay adiciones nuevas a la historia, pero creo que es un gran juego para adquirir si quieres recorrer lo que queda del oeste indómito mientras aún puedes."
     },
     {
         "medio": "Game Forces PT",
         "puntuacion": 85,
-        "comentario": "Red Dead Redemption is a masterpiece of the open world genre that combines deep storytelling with an immersive, detailed world.  The game not only offers an experience rich in action and adventure but also a strong reflection on the choices we make and their consequences.  A title that I recommend to all players, and a clear milestone in the development of modern games. The sequel (which is actually a prequel) Red Dead Redemption 2 is an excellent example of this evolution. Play!"
+        "comentario": "Red Dead Redemption es una obra maestra del género de mundo abierto que combina una narración profunda con un mundo inmersivo y detallado. El juego no solo ofrece una experiencia rica en acción y aventura, sino también una fuerte reflexión sobre las decisiones que tomamos y sus consecuencias. Un título que recomiendo a todos los jugadores, y un claro hito en el desarrollo de los juegos modernos. La secuela (que en realidad es una precuela), Red Dead Redemption 2, es un excelente ejemplo de esta evolución. ¡Juega!"
     },
     {
         "medio": "Andrenoob",
         "puntuacion": 90,
-        "comentario": "Red Dead Redemption on Steam is an experience that lives up to expectations for many years. Surpassing expectations of its original PS3 and Xbox 360 versions, to be the definitive edition of the game."
+        "comentario": "Red Dead Redemption en Steam es una experiencia que cumple con las expectativas de muchos años. Supera las expectativas de sus versiones originales de PS3 y Xbox 360, para ser la edición definitiva del juego."
     },
     {
         "medio": "STWGames Italia",
         "puntuacion": 85,
-        "comentario": "Released nearly 15 years ago, Red Dead Redemption continues to hold significant influence over the gaming industry, remaining a legendary work that defies the test of time. This long-awaited PC edition offers little more than the essentials to fully enjoy the original experience, though it still suffers from some technical issues that we hope will be addressed over time."
+        "comentario": "Lanzado hace casi 15 años, Red Dead Redemption continúa teniendo una influencia significativa sobre la industria de los juegos, permaneciendo como una obra legendaria que desafía la prueba del tiempo. Esta tan esperada edición para PC ofrece poco más que lo esencial para disfrutar plenamente de la experiencia original, aunque todavía sufre de algunos problemas técnicos que esperamos que se aborden con el tiempo."
     },
     {
         "medio": "Rectify Gaming",
         "puntuacion": 90,
-        "comentario": "From quality-of-life improvements to entirely new gameplay experiences, mods breathe fresh life into Red Dead Redemption, extending its replayability far beyond the base game. Combined with faster loading times and improved stability, the PC version stands out as the best way to explore John Marston’s epic journey through the frontier."
+        "comentario": "Desde mejoras en la calidad de vida hasta experiencias de juego completamente nuevas, los mods le dan vida nueva a Red Dead Redemption, extendiendo su capacidad de reproducción mucho más allá del juego base. Combinado con tiempos de carga más rápidos y una estabilidad mejorada, la versión de PC se destaca como la mejor forma de explorar el viaje épico de John Marston a través de la frontera."
     },
     {
         "medio": "BaziCenter",
         "puntuacion": 85,
-        "comentario": "After 14 years of its initial release on consoles, Red Dead Redemption has finally arrived on PC, and it's still relevant! And if it weren't for Red Dead Redemption 2, it would have been the best Western Action Adventure experience on the market. That's how good RDR was and still is, and that's how any developer should design their games."
+        "comentario": "Después de 14 años de su lanzamiento inicial en consolas, Red Dead Redemption finalmente ha llegado a PC, ¡y sigue siendo relevante! Y si no fuera por Red Dead Redemption 2, habría sido la mejor experiencia de aventura y acción del oeste en el mercado. Así de bueno era y es RDR, y así es como cualquier desarrollador debería diseñar sus juegos."
     },
     {
         "medio": "Worth Playing",
         "puntuacion": 70,
-        "comentario": "Even after 14 years, Red Dead Redemption remains a good example of how to do a proper Western in video game form. The main adventure is more focused than the sequel due to the relatively smaller cast and scope of your travels, but there are also plenty of side-quests that make it worthwhile to divert from the main questline. Undead Nightmare remains one of the better zombie games out there, and it still feels distinct after all these years. You just wish that there was more work done to the graphics outside of adding HDR and upping the brightness, especially since they're charging $50 for a 14-year-old port. The game is still worth adding to your library, but you might want to wait for a very good discount."
+        "comentario": "Incluso después de 14 años, Red Dead Redemption sigue siendo un buen ejemplo de cómo hacer un western adecuado en forma de videojuego. La aventura principal está más enfocada que la secuela debido al elenco relativamente más pequeño y al alcance de tus viajes, pero también hay muchas misiones secundarias que hacen que valga la pena desviarse de la línea de misiones principal. Undead Nightmare sigue siendo uno de los mejores juegos de zombis que existen, y todavía se siente distinto después de todos estos años. Solo desearías que se hubiera hecho más trabajo en los gráficos fuera de añadir HDR y subir el brillo, especialmente porque están cobrando 50 dólares por un port de hace 14 años. El juego todavía vale la pena añadirlo a tu biblioteca, pero quizás quieras esperar a un muy buen descuento."
     },
     {
         "medio": "IGN Spain",
         "puntuacion": 80,
-        "comentario": "Red Dead Redemption is an exceptional game, and its PC port more than delivers, offering a well-optimized experience even for less powerful devices. Even so, it is missing some substantial additions or improvements after so many years of waiting."
+        "comentario": "Red Dead Redemption es un juego excepcional, y su port para PC más que cumple, ofreciendo una experiencia bien optimizada incluso para dispositivos menos potentes. Aun así, le faltan algunas adiciones o mejoras sustanciales después de tantos años de espera."
     },
     {
         "medio": "The Games Machine",
         "puntuacion": 80,
-        "comentario": "Finally, after fourteen years, Red Dead Redemption also arrives on PC. The title has aged very well, unfortunately this conversion brings with it countless technical problems."
+        "comentario": "Finalmente, después de catorce años, Red Dead Redemption también llega a PC. El título ha envejecido muy bien, desafortunadamente esta conversión trae consigo innumerables problemas técnicos."
     },
     {
         "medio": "Gameffine",
         "puntuacion": 75,
-        "comentario": "Rating the Red Dead Redemption PC port proved to be a painful process for me. On the one hand, you have a basic but solid port of one of the most requested and highly rated games of all time. On the other hand, the pricing of the PC port is one of the most egregious this year. What’s even worse is Rockstar’s utter disregard for regional pricing. With pricing the way it is now, I cannot in good conscience recommend Red Dead Redemption to our Indian audience."
+        "comentario": "Calificar el port para PC de Red Dead Redemption resultó ser un proceso doloroso para mí. Por un lado, tienes un port básico pero sólido de uno de los juegos más solicitados y mejor calificados de todos los tiempos. Por otro lado, el precio del port para PC es uno de los más atroces de este año. Lo que es aún peor es el total desprecio de Rockstar por los precios regionales. Con el precio tal como está ahora, no puedo recomendar en conciencia Red Dead Redemption a nuestra audiencia india."
     },
     {
         "medio": "Player2.net.au",
         "puntuacion": 91,
-        "comentario": "The price, however, is literally the only bad thing I can say about what is one of my favourite gaming experiences of all time. It may be an old game now, but it is one that has aged like fine wine. The gameplay is pitch-perfect, the art direction is stunning and the story holds the same emotional impact it always did."
+        "comentario": "El precio, sin embargo, es literalmente lo único malo que puedo decir sobre lo que es una de mis experiencias de juego favoritas de todos los tiempos. Puede que sea un juego antiguo ahora, pero es uno que ha envejecido como el buen vino. La jugabilidad es perfecta, la dirección de arte es impresionante y la historia mantiene el mismo impacto emocional que siempre tuvo."
     },
     {
         "medio": "SECTOR.sk",
         "puntuacion": 80,
-        "comentario": "This cult western has long been absent from the PC, although its sequel was released a few years ago. Rockstar has finally released it on this platform, but with outdated graphics and a high price tag."
+        "comentario": "Este western de culto ha estado ausente de la PC durante mucho tiempo, aunque su secuela fue lanzada hace unos años. Rockstar finalmente lo ha lanzado en esta plataforma, pero con gráficos obsoletos y un precio elevado."
     },
     {
         "medio": "Saving Content",
         "puntuacion": 100,
-        "comentario": "In terms of price, I do feel it is worth it; but given how much time has passed, should be something slightly cheaper despite how much work has been put into this. Red Dead Redemption is a fantastic spaghetti western in video game form that still has, and is only surpassed by the equally fantastic 2018’s Red Dead Redemption 2. In the 14 years of its release, this remains a blueprint of incredible open-world design from its characters, missions, and things to do. This is not a game of just nostalgia, but endurance over time. Red Dead Redemption is still a masterpiece, and can now finally be enjoyed to the fullest on PC."
+        "comentario": "En términos de precio, siento que vale la pena; pero dado cuánto tiempo ha pasado, debería ser algo más barato a pesar de cuánto trabajo se ha puesto en esto. Red Dead Redemption es un fantástico spaghetti western en forma de videojuego que todavía tiene, y solo es superado por el igualmente fantástico Red Dead Redemption 2 de 2018. En los 14 años de su lanzamiento, esto sigue siendo un modelo de diseño de mundo abierto increíble desde sus personajes, misiones y cosas por hacer. Este no es un juego solo de nostalgia, sino de resistencia en el tiempo. Red Dead Redemption sigue siendo una obra maestra, y finalmente puede ser disfrutado al máximo en PC."
     },
     {
         "medio": "EmuGlx.org",
         "puntuacion": 85,
-        "comentario": "Looking at the big picture, Red Dead Redemption has received a high-quality PC port that, aside from its steep price, leaves little to criticize. The game remains engaging and is well worth trying if you’ve never experienced this title on a console before."
+        "comentario": "Mirando el panorama general, Red Dead Redemption ha recibido un port para PC de alta calidad que, aparte de su precio elevado, deja poco que criticar. El juego sigue siendo atractivo y bien vale la pena probarlo si nunca has experimentado este título en una consola antes."
     },
     {
         "medio": "Entertainium",
         "puntuacion": 75,
-        "comentario": "Red Dead Redemption has certainly aged like a fine wine, still retaining its satisfying gameplay and an enormous, gorgeous wild west to explore."
+        "comentario": "Red Dead Redemption ciertamente ha envejecido como el buen vino, conservando su satisfactoria jugabilidad y un enorme y hermoso Salvaje Oeste para explorar."
     },
     {
         "medio": "NoobFeed",
         "puntuacion": 90,
-        "comentario": "Red Dead Redemption is a masterpiece that endures. Sure, it's a little rough around the edges, and the price point for this rerelease feels like a bit of a reach, but what you're getting is a weird little piece of gaming history story-driven experience that rarely comes along in such an unfiltered form."
+        "comentario": "Red Dead Redemption es una obra maestra que perdura. Seguro, es un poco áspero en los bordes, y el punto de precio para este relanzamiento se siente como un poco excesivo, pero lo que estás obteniendo es una pequeña pieza extraña de historia de juegos, una experiencia impulsada por la narrativa que rara vez aparece de una forma tan sin filtrar."
     },
     {
         "medio": "Evilgamerz",
         "puntuacion": 80,
-        "comentario": "If you have never played Red Dead Redemption, it is about time! There is enough to note graphically, but we have to take into account that this is a game from 2010. Bringing it to a 2024 standard is quite a challenge, I can understand. So don't expect Horizon Zero Dawn Remaster quality, because the base game is simply a lot older in that respect. The gameplay and content are still rock solid, although it feels a bit dated here and there. The running, the jumping, the physics, it all feels and looks a bit like you are playing Grand Theft Auto III. But if you're looking for a game that simply plays well, has a good story and looks acceptable enough for this day and age, then Red Dead Redemption for PC, including the expansion, will keep you going and will allow you to relive many Western influences."
+        "comentario": "Si nunca has jugado Red Dead Redemption, ¡ya es hora! Hay suficiente para notar gráficamente, pero tenemos que tener en cuenta que este es un juego de 2010. Llevarlo a un estándar de 2024 es todo un desafío, lo puedo entender. Así que no esperes una calidad tipo remaster de Horizon Zero Dawn, porque el juego base es simplemente mucho más antiguo en ese aspecto. La jugabilidad y el contenido siguen siendo sólidos como una roca, aunque se siente un poco anticuado aquí y allá. El correr, el saltar, la física, todo se siente y se ve un poco como si estuvieras jugando Grand Theft Auto III. Pero si estás buscando un juego que simplemente se juegue bien, tenga una buena historia y se vea lo suficientemente aceptable para esta época, entonces Red Dead Redemption para PC, incluida la expansión, te mantendrá en marcha y te permitirá revivir muchas influencias del Western."
     },
     {
         "medio": "Hobby Consolas",
         "puntuacion": 88,
-        "comentario": "It is indisputable that Red Dead Redemption is a masterpiece, a superb western and one of Rockstar's best games. If you haven't played it, you're going to enjoy it in a big way. But at the same time, other factors, such as price or the absence of major improvements, slightly cast a shadow over what should have been a great debut."
+        "comentario": "Es indiscutible que Red Dead Redemption es una obra maestra, un magnífico western y uno de los mejores juegos de Rockstar. Si no lo has jugado, lo vas a disfrutar a lo grande. Pero al mismo tiempo, otros factores, como el precio o la ausencia de mejoras importantes, ensombrecen ligeramente lo que debería haber sido un gran debut."
     },
     {
         "medio": "Areajugones",
         "puntuacion": 90,
-        "comentario": "Red Dead Redemption on PC is a testament to the power of timeless design. This version not only preserves the magic of the original, but improves on it in significant ways. The fluidity of the unlocked framerate, the sharpness of 4K resolution, and the improvements to draw distance make this, without a doubt, the best way to experience this modern classic."
+        "comentario": "Red Dead Redemption en PC es un testimonio del poder del diseño atemporal. Esta versión no solo preserva la magia del original, sino que la mejora de maneras significativas. La fluidez de la tasa de fotogramas desbloqueada, la nitidez de la resolución 4K y las mejoras en la distancia de dibujado hacen de esto, sin duda, la mejor manera de experimentar este clásico moderno."
     },
     {
         "medio": "Uagna",
         "puntuacion": 80,
-        "comentario": "The porting of Red Dead Redemption is finally available on PC! For many gamers, the arrival of John Marston's adventures represents the capture of the mythical white whale, and just as many had given up hope that the Rockstar western would finally land on computer. It's a pity about the launch price, as the €50 charged for a 14-year-old game would have been better justified against a more substantial restoration work. Nevertheless, we can finally enjoy one of the great masterpieces of gaming history on PC, and this is the most important news.The porting of Red Dead Redemption is finally available on PC! For many gamers, the arrival of John Marston's adventures represents the capture of the mythical white whale, and just as many had given up hope that Rockstar's western would finally land on computer. It's a pity about the launch price, as the €50 charged for a 14-year-old game would have been better justified against a more substantial restoration work. Nevertheless, we can finally enjoy one of the great masterpieces of video game history on PC, and this is the most important news."
+        "comentario": "¡El port de Red Dead Redemption finalmente está disponible en PC! Para muchos jugadores, la llegada de las aventuras de John Marston representa la captura de la mítica ballena blanca, y muchos habían perdido la esperanza de que el western de Rockstar finalmente llegara a la computadora. Es una pena el precio de lanzamiento, ya que los 50 euros cobrados por un juego de 14 años se habrían justificado mejor frente a un trabajo de restauración más sustancial. Sin embargo, finalmente podemos disfrutar de una de las grandes obras maestras de la historia de los videojuegos en PC, y esta es la noticia más importante."
     },
     {
         "medio": "Merlin'in Kazanı",
         "puntuacion": 72,
-        "comentario": "Coming to PC after years, Red Dead Redemption was disappointing with outdated graphics and a high price. Rockstar seems to have presented the game with minimal effort without updating it."
+        "comentario": "Llegando a PC después de años, Red Dead Redemption fue decepcionante con gráficos obsoletos y un precio alto. Rockstar parece haber presentado el juego con un esfuerzo mínimo sin actualizarlo."
     },
     {
         "medio": "GameMAG",
         "puntuacion": 80,
-        "comentario": "The silver lining here is that now the game is finally freed from the cage of old hardware. And that's a great thing."
+        "comentario": "El lado positivo aquí es que ahora el juego finalmente está liberado de la jaula del hardware antiguo. Y eso es algo grandioso."
     },
     {
         "medio": "Niche Gamer",
         "puntuacion": 80,
-        "comentario": "Although the sluggish gameplay and unresponsive action have always been open to question, with the right mindset, it’s possible to adapt to its crap-factor. It’s worth acclimating to them because Red Dead Redemption is more than the sum of its parts."
+        "comentario": "Aunque la jugabilidad lenta y la acción poco receptiva siempre han estado abiertas a cuestionamientos, con la mentalidad correcta, es posible adaptarse a su factor de torpeza. Vale la pena acostumbrarse a ellos porque Red Dead Redemption es más que la suma de sus partes."
     },
     {
         "medio": "Cubed3",
         "puntuacion": 70,
-        "comentario": "Despite its gameplay flaws, Red Dead Redemption is a classic on seventh gen consoles. Its well-crafted characters and script are among the era's best. It's a technological marvel with meticulous attention to detail. While the gameplay may require adaptation on the player's part, it's worth it because Red Dead Redemption's overall experience is greater than the sum of its individual parts."
+        "comentario": "A pesar de sus fallas de jugabilidad, Red Dead Redemption es un clásico en las consolas de séptima generación. Sus personajes y guion bien elaborados están entre los mejores de la era. Es una maravilla tecnológica con una atención meticulosa al detalle. Si bien la jugabilidad puede requerir adaptación por parte del jugador, vale la pena porque la experiencia general de Red Dead Redemption es mayor que la suma de sus partes individuales."
     },
     {
         "medio": "NookGaming",
         "puntuacion": 80,
-        "comentario": "Red Dead Redemption is hailed as one of the best games ever made, as is its sequel, and this is a strong reminder as to why. It's aged brilliantly and is easily a game I would suggest everyone needs to play. Sadly, the lack of multiplayer and the higher price tag do seem to be sticking points for some. But with the sheer amount of content and quality, it still offers fair value for an unmissable gaming experience."
+        "comentario": "Red Dead Redemption es aclamado como uno de los mejores juegos jamás creados, al igual que su secuela, y este es un fuerte recordatorio del porqué. Ha envejecido brillantemente y es fácilmente un juego que sugeriría que todos necesitan jugar. Lamentablemente, la falta de multijugador y el precio más alto parecen ser puntos de fricción para algunos. Pero con la gran cantidad de contenido y calidad, todavía ofrece un valor justo para una experiencia de juego imperdible."
     },
     {
         "medio": "Enternity.gr",
         "puntuacion": 90,
-        "comentario": "Red Dead Redemption PS4 belongs to the category of games that make you wonder, how to judge a legend of that time, knowing the technological data of the modern era"
+        "comentario": "Red Dead Redemption PS4 pertenece a la categoría de juegos que te hacen preguntarte cómo juzgar una leyenda de ese tiempo, conociendo los datos tecnológicos de la era moderna."
     },
     {
         "medio": "Hey Poor Player",
         "puntuacion": 80,
-        "comentario": "Red Dead Redemption on Switch is a mostly fine port of a great game. If you’ve been dying to replay it or haven’t checked it out before, you should absolutely do so, but those who have already fully explored the old west won’t find anything new here or much reason to buy it again outside of the handheld factor. For some, though, that will be all the incentive they need."
+        "comentario": "Red Dead Redemption en Switch es un port mayormente bueno de un gran juego. Si te has estado muriendo por volver a jugarlo o no lo habías probado antes, deberías hacerlo absolutamente, pero aquellos que ya han explorado completamente el viejo oeste no encontrarán nada nuevo aquí ni mucha razón para comprarlo de nuevo fuera del factor portátil. Para algunos, sin embargo, eso será todo el incentivo que necesiten."
     },
     {
         "medio": "Gaming Age",
         "puntuacion": 100,
-        "comentario": "Red Dead Redemption was a great game when it came out in 2010, and this proves it’s still a great game in 2023. While some classics from previous generations feel dated, that’s certainly not the case here – and if you missed it (or weren’t around for it) thirteen years ago, now’s the time to finally play it. And if you did play it? Maybe it’s time to play it again."
+        "comentario": "Red Dead Redemption fue un gran juego cuando salió en 2010, y esto demuestra que sigue siendo un gran juego en 2023. Si bien algunos clásicos de generaciones anteriores se sienten anticuados, ese ciertamente no es el caso aquí, y si te lo perdiste (o no estabas cerca para jugarlo) hace trece años, ahora es el momento de finalmente jugarlo. ¿Y si lo jugaste? Tal vez sea hora de jugarlo de nuevo."
     },
     {
         "medio": "Digital Chumps",
         "puntuacion": 98,
-        "comentario": "'Red Dead Redemption' is a game that will stand the test of time no matter what...The West will always hold a special place in my heart and life."
+        "comentario": "'Red Dead Redemption' es un juego que resistirá la prueba del tiempo sin importar qué... El Oeste siempre tendrá un lugar especial en mi corazón y mi vida."
     },
     {
         "medio": "Gameffine",
         "puntuacion": 70,
-        "comentario": "While Red Dead Redemption is a spectacular masterpiece on its own, its PlayStation 4 port hardly brings anything new to the table with a steep price tag of its own. While it’s a huge missed opportunity after a decade-long wait, it’s nice that more modern systems besides Xbox consoles can finally play this piece of art. As for the recommendation, you should pick this up while it is on sale or wait for the possible PC and PS5 ports that may hit the stores next year."
+        "comentario": "Si bien Red Dead Redemption es una obra maestra espectacular por sí misma, su port para PlayStation 4 apenas aporta algo nuevo a la mesa con un precio elevado. Si bien es una gran oportunidad perdida después de una década de espera, es bueno que sistemas más modernos además de las consolas Xbox finalmente puedan jugar esta obra de arte. En cuanto a la recomendación, deberías comprarlo cuando esté en oferta o esperar los posibles ports para PC y PS5 que pueden llegar a las tiendas el próximo año."
     },
     {
         "medio": "Impulsegamer",
         "puntuacion": 86,
-        "comentario": "Step into the well worn boots of John Marsten and experience the Wild West in all its Glory!"
+        "comentario": "¡Ponte las botas bien usadas de John Marston y experimenta el Salvaje Oeste en todo su esplendor!"
     },
     {
         "medio": "Nintendo Blast",
         "puntuacion": 85,
-        "comentario": "Red Dead Redemption has a memorable story, iconic characters and a gameplay that left a mark for a golden age of action adventures and for Rockstar, who managed to spread their wings beyond the shadow of Grand Theft Auto. Its influence lasts to these days, as I am here, 13 years later, talking about its Switch port; thus, if you have any reservation about experiencing this modern classic, I recommend at least giving it a chance. Who knows if you won't get so excited that you will also jump into Red Dead Redemption 2 (if you haven't yet)?"
+        "comentario": "Red Dead Redemption tiene una historia memorable, personajes icónicos y una jugabilidad que dejó una marca para una edad de oro de aventuras de acción y para Rockstar, quienes lograron extender sus alas más allá de la sombra de Grand Theft Auto. Su influencia dura hasta estos días, ya que estoy aquí, 13 años después, hablando de su port para Switch; por lo tanto, si tienes alguna reserva sobre experimentar este clásico moderno, recomiendo al menos darle una oportunidad. ¿Quién sabe si no te entusiasmarás tanto que también saltarás a Red Dead Redemption 2 (si aún no lo has hecho)?"
     },
     {
         "medio": "Duuro Magazine",
         "puntuacion": 75,
-        "comentario": "If you have played the game back in 2010 with fond memories of it and you have 50 bucks to waste, then absolutely go for it as the game is as good as you remember it. But if you are on a budget, there are newer and better games you can spend your hard earned cash."
+        "comentario": "Si jugaste el juego en 2010 con buenos recuerdos de él y tienes 50 dólares para gastar, entonces absolutamente ve por ello, ya que el juego es tan bueno como lo recuerdas. Pero si tienes un presupuesto ajustado, hay juegos más nuevos y mejores en los que puedes gastar tu dinero ganado con esfuerzo."
     },
     {
         "medio": "NintendoBoy",
         "puntuacion": 85,
-        "comentario": "Red Dead Redemption is a game marked by an excellent narrative and sensational dialogues (the introductory scene is a show in itself). However, the somewhat high price tag may put off curious people, after all, it is a 2010 title and it is neither The Legend of Zelda nor Mario, to encourage owners of Nintendo's console to pay full price for it. But, for everything that Red Dead Redemption was and continues to be, if you do, you won't regret it. The title is a great addition to the excellent catalog of games on the phenomenon called Nintendo Switch."
+        "comentario": "Red Dead Redemption es un juego marcado por una narrativa excelente y diálogos sensacionales (la escena introductoria es un espectáculo en sí misma). Sin embargo, el precio algo alto puede desanimar a las personas curiosas; después de todo, es un título de 2010 y no es ni The Legend of Zelda ni Mario, como para alentar a los propietarios de la consola de Nintendo a pagar el precio completo por él. Pero, por todo lo que Red Dead Redemption fue y sigue siendo, si lo haces, no te arrepentirás. El título es una gran adición al excelente catálogo de juegos en el fenómeno llamado Nintendo Switch."
     },
     {
         "medio": "SomHráč.sk",
         "puntuacion": 80,
-        "comentario": "Red Dead Redemption is an excellent game in a bit of a lazy repackaging. If you haven't played it yet, go right ahead, but otherwise, there's not much for you here."
+        "comentario": "Red Dead Redemption es un juego excelente en un reempaquetado un poco perezoso. Si aún no lo has jugado, adelante, pero de lo contrario, no hay mucho aquí para ti."
     },
     {
         "medio": "PSX Brasil",
         "puntuacion": 75,
-        "comentario": "Although not the version expected by many players, Red Dead Redemption shows strength as one of the best games of all time. The 2023 version is the most stable option, but it could be much better."
+        "comentario": "Aunque no es la versión esperada por muchos jugadores, Red Dead Redemption muestra fuerza como uno de los mejores juegos de todos los tiempos. La versión de 2023 es la opción más estable, pero podría ser mucho mejor."
     },
     {
         "medio": "Thumb Culture",
         "puntuacion": 60,
-        "comentario": "Even though I looked forward to playing Red Dead Redemption after playing, I think it would have been better off with a remaster. Maybe it’s because of the vast improvements I enjoyed in Red Dead Redemption 2, but I didn’t find this as enjoyable as I did back on PS3."
+        "comentario": "Aunque esperaba con ansias jugar Red Dead Redemption después de jugarlo, creo que hubiera sido mejor con un remaster. Tal vez sea por las grandes mejoras que disfruté en Red Dead Redemption 2, pero no lo encontré tan disfrutable como lo hice en la PS3."
     },
     {
         "medio": "Expansive",
         "puntuacion": 60,
-        "comentario": "Red Dead Redemption impresses thirteen years on by still offering great storytelling, fun missions and a gripping, cinematic adventure from start to finish. Double Eleven have worked magic and provided a practically perfect port on Nintendo Switch that’s, for the most part, a like-for-like recreation, and in some cases better than ever. Stripped out multiplayer, a lack of Switch specific features and a higher than expected price point may deter some players, but with a stable frame rate and stunning, vivid visuals, the opportunity to play as John Marston anywhere and everywhere makes for a very tempting proposition."
+        "comentario": "Red Dead Redemption impresiona trece años después al seguir ofreciendo una gran narrativa, misiones divertidas y una aventura cinematográfica apasionante de principio a fin. Double Eleven ha trabajado magia y proporcionó un port prácticamente perfecto en Nintendo Switch que es, en su mayor parte, una recreación uno a uno, y en algunos casos mejor que nunca. La falta de multijugador, la falta de características específicas de Switch y un precio más alto de lo esperado pueden disuadir a algunos jugadores, pero con una tasa de fotogramas estable y efectos visuales impresionantes y vívidos, la oportunidad de jugar como John Marston en cualquier lugar y en todas partes lo convierte en una propuesta muy tentadora."
     },
     {
         "medio": "GamingTrend",
         "puntuacion": 75,
-        "comentario": "Rockstar's port of Red Dead Redemption on the Playstation 4 and Nintendo Switch provides an opportunity for both newcomers and fans alike to experience one of gaming's most memorable adventures once again. While there are some improvements to the visuals and performance, remnants of the game's age still bleed through. If you can look past the outrageous price tag and some cut content, then your journey back to the Wild West is definitely one worth taking."
+        "comentario": "El port de Rockstar de Red Dead Redemption en Playstation 4 y Nintendo Switch brinda una oportunidad tanto para los recién llegados como para los fanáticos de experimentar una de las aventuras más memorables de los juegos una vez más. Si bien hay algunas mejoras en las imágenes y el rendimiento, los vestigios de la edad del juego aún se filtran. Si puedes mirar más allá del escandaloso precio y algo de contenido recortado, entonces tu viaje de regreso al Salvaje Oeste es definitivamente uno que vale la pena tomar."
     },
     {
         "medio": "Cultured Vultures",
         "puntuacion": 80,
-        "comentario": "Red Dead Redemption on the Switch is the exact same Western epic you know and love. That's both its greatest strength and its greatest weakness."
+        "comentario": "Red Dead Redemption en Switch es la misma epopeya western que conoces y amas. Esa es tanto su mayor fortaleza como su mayor debilidad."
     },
     {
         "medio": "WayTooManyGames",
         "puntuacion": 70,
-        "comentario": "This game has aged a lot. Although I did have fun with Red Dead Redemption, I can’t help but think this is just a bit below the average of what we expect from a 2023 title being released at a ludicrously premium price. Having this on-the-go, whilst a novel concept, is a bit detrimental to its epic, movie-like plot and structure. This benefits from being played on a bigger screen, and by doing so, it looks a bit worse. Not to mention the fact its controls and physics are simply too clunky, even for Xbox 360 standards."
+        "comentario": "Este juego ha envejecido mucho. Aunque me divertí con Red Dead Redemption, no puedo evitar pensar que esto está un poco por debajo del promedio de lo que esperamos de un título de 2023 que se lanza a un precio premium ridículo. Tener esto en movimiento, aunque es un concepto novedoso, es un poco perjudicial para su trama y estructura épicas, tipo película. Esto se beneficia de jugarse en una pantalla más grande, y al hacerlo, se ve un poco peor. Sin mencionar el hecho de que sus controles y física son simplemente demasiado torpes, incluso para los estándares de Xbox 360."
     },
     {
         "medio": "Push Square",
         "puntuacion": 60,
-        "comentario": "The bottom line here is that Red Dead Redemption deserves so much more."
+        "comentario": "La conclusión aquí es que Red Dead Redemption merece mucho más."
     },
     {
         "medio": "Evilgamerz",
         "puntuacion": 72,
-        "comentario": "Without a doubt, Red Dead Redemption is a more than fantastic game that is an excellent addition, especially on the Switch, but the asking price of 50 euros is way too much for such a simple port and that leaves a sour aftertaste. If the price is not a problem for you, then this is a great game. Fortunately, it has not become such a fiasco as the GTA trilogy, but next time we would rather see a full remake."
+        "comentario": "Sin duda, Red Dead Redemption es un juego más que fantástico que es una excelente adición, especialmente en Switch, pero el precio de venta de 50 euros es demasiado para un port tan simple y eso deja un regusto amargo. Si el precio no es un problema para ti, entonces este es un gran juego. Afortunadamente, no se ha convertido en un fiasco como la trilogía de GTA, pero la próxima vez preferiríamos ver un remake completo."
     },
     {
         "medio": "IGN Spain",
         "puntuacion": 80,
-        "comentario": "Red Dead Redemption is really enjoyable on PS4 and Nintendo Switch. After thirteen years, the Rockstar classic holds up like no other, and these adjustments are more than enough for a very satisfying experience. Many of us would have liked something more, but for both nostalgic and new fans of the saga, this port is a fantastic opportunity to get into the boots of John Marston."
+        "comentario": "Red Dead Redemption es realmente disfrutable en PS4 y Nintendo Switch. Después de trece años, el clásico de Rockstar se mantiene como ningún otro, y estos ajustes son más que suficientes para una experiencia muy satisfactoria. Muchos de nosotros hubiéramos querido algo más, pero tanto para los fanáticos nostálgicos como para los nuevos de la saga, este port es una oportunidad fantástica para ponerse en las botas de John Marston."
     },
     {
         "medio": "COGconnected",
         "puntuacion": 84,
-        "comentario": "Red Dead Redemption is an exceptional game that manages to capture the spirit of the Wild West. The incredible sound design and enthralling narrative are highlights of the adventure. Although it runs perfectly well on the Switch, the lack of an online mode and no additional content is disappointing. The high price point is contentious, however, this is an exquisite open-world adventure that shows Rockstar at its finest."
+        "comentario": "Red Dead Redemption es un juego excepcional que logra capturar el espíritu del Salvaje Oeste. El increíble diseño de sonido y la narrativa apasionante son aspectos destacados de la aventura. Aunque funciona perfectamente bien en Switch, la falta de un modo en línea y ningún contenido adicional es decepcionante. El precio alto es polémico, sin embargo, esta es una exquisita aventura de mundo abierto que muestra a Rockstar en su mejor momento."
     },
     {
         "medio": "LevelUp",
         "puntuacion": 90,
-        "comentario": "Its impeccable remastering is an excellent excuse for those who wish to enjoy this wonderful, imposing and unforgettable adventure in its next-gen version for PlayStation 5, portable on Nintendo Switch or backward-compatible on Xbox Series X / S. As well as a first approach to those who did not enjoy his original work and wish to expand the powerful narrative experience that occurred after 'Red Dead Redemption 2'."
+        "comentario": "Su impecable remasterización es una excelente excusa para aquellos que desean disfrutar de esta maravillosa, imponente e inolvidable aventura en su versión de próxima generación para PlayStation 5, portátil en Nintendo Switch o retrocompatible en Xbox Series X / S. Así como un primer enfoque para aquellos que no disfrutaron su obra original y desean expandir la poderosa experiencia narrativa que ocurrió después de 'Red Dead Redemption 2'."
     },
     {
         "medio": "Nintendo Life",
         "puntuacion": 80,
-        "comentario": "Red Dead Redemption on Switch is a straightforward port of 2010's masterpiece with no added bells or whistles for a rather high price tag. If you can get over that, this is a game we highly recommend digging into, especially if you've yet to experience it. Rockstar's Western epic holds up surprisingly well, its story is as powerful as ever, its knockabout action still feels great, and it looks and plays perfectly well on Nintendo's console. Multiplayer has been cut, which is a sore but understandable excision, and we'd really have liked to see effort put into adding gyro controls or touching up the graphics a little, but it is what it is. This is a proper all-timer ported successfully to Switch and, if you can stump up the cash, you'll have a great time here regardless of the lack of TLC."
+        "comentario": "Red Dead Redemption en Switch es un port directo de la obra maestra de 2010 sin campanas ni silbatos añadidos por un precio bastante alto. Si puedes superar eso, este es un juego que recomendamos encarecidamente explorar, especialmente si aún no lo has experimentado. La epopeya western de Rockstar se mantiene sorprendentemente bien, su historia es tan poderosa como siempre, su acción de golpe todavía se siente genial, y se ve y juega perfectamente bien en la consola de Nintendo. El multijugador ha sido eliminado, lo cual es una escisión dolorosa pero comprensible, y realmente nos hubiera gustado ver el esfuerzo puesto en añadir controles giroscópicos o retocar los gráficos un poco, pero es lo que es. Este es un juego de todos los tiempos portado con éxito a Switch y, si puedes pagar el efectivo, te lo pasarás genial aquí independientemente de la falta de cuidado."
     },
     {
         "medio": "Impulsegamer",
         "puntuacion": 70,
-        "comentario": "Overall, after all these years, Red Dead Redemption is still a great game that offers players a compelling narrative, a fantastic open world, and an overall highly engaging gameplay experience. However, the PS4 port isn't something that can easily be recommended to those who've already played the game and its DLC or even own the original bundle, at least at its current asking price. As such, if you've never played the game and are still interested in the port, I'd advise waiting for a sale or buying the Switch port, as that at least offers the value of playing the game on the go."
+        "comentario": "En general, después de todos estos años, Red Dead Redemption sigue siendo un gran juego que ofrece a los jugadores una narrativa convincente, un mundo abierto fantástico y una experiencia de juego altamente atractiva en general. Sin embargo, el port de PS4 no es algo que se pueda recomendar fácilmente a aquellos que ya han jugado el juego y su DLC o incluso poseen el paquete original, al menos a su precio actual. Como tal, si nunca has jugado el juego y todavía estás interesado en el port, te aconsejaría esperar a una oferta o comprar el port de Switch, ya que al menos ofrece el valor de jugar el juego sobre la marcha."
     },
     {
         "medio": "Hobby Consolas",
         "puntuacion": 88,
-        "comentario": "It is a pity that more effort has not been put into the conversion, because the original RDR is still a masterpiece. Even with the flaws, it is worth revisiting."
+        "comentario": "Es una lástima que no se haya puesto más esfuerzo en la conversión, porque el RDR original sigue siendo una obra maestra. Incluso con los defectos, vale la pena volver a visitarlo."
     },
     {
         "medio": "Press Start",
         "puntuacion": 75,
-        "comentario": "The Switch port of Red Dead Redemption is a faithful way to get into the world of Red Dead. It looks good as long as you adjust expectations and consider the game's age, and performs consistently well in both handheld and docked modes. While many aspects will feel dated, I still had a fun time exploring the old west with John during the last gasps of the American frontier."
+        "comentario": "El port de Switch de Red Dead Redemption es una forma fiel de entrar en el mundo de Red Dead. Se ve bien siempre que ajustes las expectativas y consideres la edad del juego, y funciona de manera consistente tanto en modo portátil como en modo acoplado. Si bien muchos aspectos se sentirán anticuados, todavía me divertí explorando el viejo oeste con John durante los últimos suspiros de la frontera estadounidense."
     },
     {
         "medio": "Bastidores",
         "puntuacion": 100,
-        "comentario": "Red Dead Redemption remains one of Rockstar’s greatest achievements, turning the death of the Old West into a tragic, unforgettable journey of violence, redemption, and consequence."
+        "comentario": "Red Dead Redemption sigue siendo uno de los mayores logros de Rockstar, convirtiendo la muerte del Viejo Oeste en un viaje trágico e inolvidable de violencia, redención y consecuencia."
     },
     {
         "medio": "Portal E7",
         "puntuacion": 100,
-        "comentario": "Red Dead Redemption is without a doubt one of the best and most impressive titles of the Xbox 360 and PlayStation 3 generation. Featuring an extremely well-constructed and, in a way, even emotional story, the game is marked by charismatic characters, with some of them being quite peculiar."
+        "comentario": "Red Dead Redemption es sin duda uno de los mejores y más impresionantes títulos de la generación de Xbox 360 y PlayStation 3. Con una historia extremadamente bien construida y, en cierto modo, incluso emotiva, el juego está marcado por personajes carismáticos, con algunos de ellos siendo bastante peculiares."
     }
 ]
 ```
@@ -326,68 +326,68 @@ Este documento centraliza el código para el análisis de sentimientos y detecci
 ## 2. `Analisis de la tabla para detectar si es AI `
 
 
- |Medio|Puntuacion|Comentario|Indice\_ia|
-|---|---|---|---|
-|Gaming Age|100\.0|Red Dead Redemption was a great game when it came out in 2010, and this proves it’s still a great game in 2023\. While some classics from previous generations feel dated, that’s certainly not the case here – and if you missed it \(or weren’t around for it\) thirteen years ago, now’s the time to finally play it\. And if you did play it? Maybe it’s time to play it again\.|3|
-|Bastidores|100\.0|Red Dead Redemption remains one of Rockstar’s greatest achievements, turning the death of the Old West into a tragic, unforgettable journey of violence, redemption, and consequence\.|4|
-|Saving Content|100\.0|In terms of price, I do feel it is worth it; but given how much time has passed, should be something slightly cheaper despite how much work has been put into this\. Red Dead Redemption is a fantastic spaghetti western in video game form that still has, and is only surpassed by the equally fantastic 2018’s Red Dead Redemption 2\. In the 14 years of its release, this remains a blueprint of incredible open-world design from its characters, missions, and things to do\. This is not a game of just nostalgia, but endurance over time\. Red Dead Redemption is still a masterpiece, and can now finally be enjoyed to the fullest on PC\.|5|
-|Portal E7|100\.0|Red Dead Redemption is without a doubt one of the best and most impressive titles of the Xbox 360 and PlayStation 3 generation\. Featuring an extremely well-constructed and, in a way, even emotional story, the game is marked by charismatic characters, with some of them being quite peculiar\.|5|
-|Digital Chumps|98\.0|'Red Dead Redemption' is a game that will stand the test of time no matter what\.\.\.The West will always hold a special place in my heart and life\.|7|
-|Player2\.net\.au|91\.0|The price, however, is literally the only bad thing I can say about what is one of my favourite gaming experiences of all time\. It may be an old game now, but it is one that has aged like fine wine\. The gameplay is pitch-perfect, the art direction is stunning and the story holds the same emotional impact it always did\.|5|
-|Enternity\.gr|90\.0|Red Dead Redemption PS4 belongs to the category of games that make you wonder, how to judge a legend of that time, knowing the technological data of the modern era|4|
-|Eternal Games|90\.0|Red Dead Redemption is considered one of the most prominent narrative games in the history of the industry, as it offered a touching human journey through the character of John Marston and his attempt to escape his past and save his family\. The game was characterized by a living world full of details, strong writing, and unforgettable characters, alongside moving events that made the experience stuck in players' minds until today\. Despite the existence of some problems such as repetition and excessive travel, the game remains an exceptional experience, especially regarding the technical and narrative standards of 2010, confirming Rockstar Games' status as one of the best gaming companies in delivering stories and world-building\.|5|
-|Rectify Gaming|90\.0|From quality-of-life improvements to entirely new gameplay experiences, mods breathe fresh life into Red Dead Redemption, extending its replayability far beyond the base game\. Combined with faster loading times and improved stability, the PC version stands out as the best way to explore John Marston’s epic journey through the frontier\.|5|
-|NoobFeed|90\.0|Red Dead Redemption is a masterpiece that endures\. Sure, it's a little rough around the edges, and the price point for this rerelease feels like a bit of a reach, but what you're getting is a weird little piece of gaming history story-driven experience that rarely comes along in such an unfiltered form\.|5|
-|Areajugones|90\.0|Red Dead Redemption on PC is a testament to the power of timeless design\. This version not only preserves the magic of the original, but improves on it in significant ways\. The fluidity of the unlocked framerate, the sharpness of 4K resolution, and the improvements to draw distance make this, without a doubt, the best way to experience this modern classic\.|5|
-|LevelUp|90\.0|Its impeccable remastering is an excellent excuse for those who wish to enjoy this wonderful, imposing and unforgettable adventure in its next-gen version for PlayStation 5, portable on Nintendo Switch or backward-compatible on Xbox Series X / S\. As well as a first approach to those who did not enjoy his original work and wish to expand the powerful narrative experience that occurred after 'Red Dead Redemption 2'\.|5|
-|Andrenoob|90\.0|Red Dead Redemption on Steam is an experience that lives up to expectations for many years\. Surpassing expectations of its original PS3 and Xbox 360 versions, to be the definitive edition of the game\.|7|
-|Hobby Consolas|88\.0|It is indisputable that Red Dead Redemption is a masterpiece, a superb western and one of Rockstar's best games\. If you haven't played it, you're going to enjoy it in a big way\. But at the same time, other factors, such as price or the absence of major improvements, slightly cast a shadow over what should have been a great debut\.|5|
-|Hobby Consolas|88\.0|It is a pity that more effort has not been put into the conversion, because the original RDR is still a masterpiece\. Even with the flaws, it is worth revisiting\.|7|
-|Impulsegamer|86\.0|Step into the well worn boots of John Marsten and experience the Wild West in all its Glory\!|2|
-|Game Forces PT|85\.0|Red Dead Redemption is a masterpiece of the open world genre that combines deep storytelling with an immersive, detailed world\.  The game not only offers an experience rich in action and adventure but also a strong reflection on the choices we make and their consequences\.  A title that I recommend to all players, and a clear milestone in the development of modern games\. The sequel \(which is actually a prequel\) Red Dead Redemption 2 is an excellent example of this evolution\. Play\!|3|
-|BaziCenter|85\.0|After 14 years of its initial release on consoles, Red Dead Redemption has finally arrived on PC, and it's still relevant\! And if it weren't for Red Dead Redemption 2, it would have been the best Western Action Adventure experience on the market\. That's how good RDR was and still is, and that's how any developer should design their games\.|3|
-|Nintendo Blast|85\.0|Red Dead Redemption has a memorable story, iconic characters and a gameplay that left a mark for a golden age of action adventures and for Rockstar, who managed to spread their wings beyond the shadow of Grand Theft Auto\. Its influence lasts to these days, as I am here, 13 years later, talking about its Switch port; thus, if you have any reservation about experiencing this modern classic, I recommend at least giving it a chance\. Who knows if you won't get so excited that you will also jump into Red Dead Redemption 2 \(if you haven't yet\)?|3|
-|STWGames Italia|85\.0|Released nearly 15 years ago, Red Dead Redemption continues to hold significant influence over the gaming industry, remaining a legendary work that defies the test of time\. This long-awaited PC edition offers little more than the essentials to fully enjoy the original experience, though it still suffers from some technical issues that we hope will be addressed over time\.|5|
-|EmuGlx\.org|85\.0|Looking at the big picture, Red Dead Redemption has received a high-quality PC port that, aside from its steep price, leaves little to criticize\. The game remains engaging and is well worth trying if you’ve never experienced this title on a console before\.|5|
-|NintendoBoy|85\.0|Red Dead Redemption is a game marked by an excellent narrative and sensational dialogues \(the introductory scene is a show in itself\)\. However, the somewhat high price tag may put off curious people, after all, it is a 2010 title and it is neither The Legend of Zelda nor Mario, to encourage owners of Nintendo's console to pay full price for it\. But, for everything that Red Dead Redemption was and continues to be, if you do, you won't regret it\. The title is a great addition to the excellent catalog of games on the phenomenon called Nintendo Switch\.|5|
-|Game8|84\.0|Red Dead Redemption remains a landmark title\. The Switch 2 port improves presentation and performance without changing the game’s core design, letting the world, story, and gameplay shine like they were always meant to\. Minor signs of aging exist, but they don’t take away from the experience\. This version stands as a definitive way to experience a classic, delivering everything that made the original great while running smoother and looking sharper than ever\.|5|
-|COGconnected|84\.0|Red Dead Redemption is an exceptional game that manages to capture the spirit of the Wild West\. The incredible sound design and enthralling narrative are highlights of the adventure\. Although it runs perfectly well on the Switch, the lack of an online mode and no additional content is disappointing\. The high price point is contentious, however, this is an exquisite open-world adventure that shows Rockstar at its finest\.|5|
-|Pizza Fria|84\.0|Red Dead Redemption for PC is a golden opportunity to relive one of gaming's greatest classics\. Its powerful narrative, engaging gameplay, and vibrant Wild West world continue to captivate, even 14 years after its original release\.|7|
-|Evilgamerz|80\.0|If you have never played Red Dead Redemption, it is about time\! There is enough to note graphically, but we have to take into account that this is a game from 2010\. Bringing it to a 2024 standard is quite a challenge, I can understand\. So don't expect Horizon Zero Dawn Remaster quality, because the base game is simply a lot older in that respect\. The gameplay and content are still rock solid, although it feels a bit dated here and there\. The running, the jumping, the physics, it all feels and looks a bit like you are playing Grand Theft Auto III\. But if you're looking for a game that simply plays well, has a good story and looks acceptable enough for this day and age, then Red Dead Redemption for PC, including the expansion, will keep you going and will allow you to relive many Western influences\.|3|
-|Uagna|80\.0|The porting of Red Dead Redemption is finally available on PC\! For many gamers, the arrival of John Marston's adventures represents the capture of the mythical white whale, and just as many had given up hope that the Rockstar western would finally land on computer\. It's a pity about the launch price, as the €50 charged for a 14-year-old game would have been better justified against a more substantial restoration work\. Nevertheless, we can finally enjoy one of the great masterpieces of gaming history on PC, and this is the most important news\.The porting of Red Dead Redemption is finally available on PC\! For many gamers, the arrival of John Marston's adventures represents the capture of the mythical white whale, and just as many had given up hope that Rockstar's western would finally land on computer\. It's a pity about the launch price, as the €50 charged for a 14-year-old game would have been better justified against a more substantial restoration work\. Nevertheless, we can finally enjoy one of the great masterpieces of video game history on PC, and this is the most important news\.|3|
-|Echo Boomer|80\.0|Red Dead Redemption finally arrives on PC, offering the option to play in "Ultra HD" without compromises\.|4|
-|TestingBuddies|80\.0|At first glance, the 50 euros charged for the PC port of Red Dead Redemption is a hefty price for a 14-year-old game that only offers a few visual and technical improvements over the original version\. If you don't know the original, you should definitely pick it up - Red Dead Redemption is an absolute highlight of gaming history that still entertains today with its gripping story, unusual characters and inimitable humor\. The atmosphere that the game introduces into the virtual western world is incomparable and even if the technology has fallen behind current standards, the experience still manages to captivate the player\. So if you have a soft spot for well-told, atmospheric open-world games, you will definitely get your money's worth here\. For those who have already played the game on the console, however, the purchase is less recommendable\. The improvements in the PC version, such as the higher resolution and smoother performance, only justify the price for a few\. However, if you have never experienced the vastness of the Wild West in Red Dead Redemption, then there is hardly a better time to catch up\. The Undead Nightmare expansion also brings a breath of fresh air to the game and provides additional hours of entertaining adventures\. In this respect, the price for newcomers is entirely justified, as this is a classic that still knows how to impress\.|5|
-|SpaceNerd\.it|80\.0|Red Dead Redemption, many years later, is still a wonder to play and explore\. Despite making zero changes to its gameplay, apart from the much appreciated inclusion of the Undead Nightmare DLC, Rockstar successfully manages to bring back the good old memories of this exceptional game thanks to a very stable port, giving everyone the chance to experience the tale of John Marston\.|5|
-|GameOnly|80\.0|Red Dead Redemption on PC is the best edition of John Marston's adventures one can play\. In terms of music and story — excellent, graphically it falls short compared to modern titles, but in terms of gameplay, it remains exceptionally enjoyable\. It's a brilliant western, causing both bursts of laughter and tears, while also skillfully addressing many issues like racism, immigration, and human rights\. A beautiful, personal story in the Wild West that's slowly getting more civilized\.|5|
-|Gamepressure|80\.0|Red Dead Redemption is an amazing experience and is one of those games that defined a generation of open-world titles where movie-level storytelling weaved into the action you got to control\. If you’ve already played it, you won’t miss anything, but if you were looking for an excuse to see what the hype was all about, wait for a sale first\.|5|
-|Niche Gamer|80\.0|Although the sluggish gameplay and unresponsive action have always been open to question, with the right mindset, it’s possible to adapt to its crap-factor\. It’s worth acclimating to them because Red Dead Redemption is more than the sum of its parts\.|5|
-|NookGaming|80\.0|Red Dead Redemption is hailed as one of the best games ever made, as is its sequel, and this is a strong reminder as to why\. It's aged brilliantly and is easily a game I would suggest everyone needs to play\. Sadly, the lack of multiplayer and the higher price tag do seem to be sticking points for some\. But with the sheer amount of content and quality, it still offers fair value for an unmissable gaming experience\.|5|
-|Hey Poor Player|80\.0|Red Dead Redemption on Switch is a mostly fine port of a great game\. If you’ve been dying to replay it or haven’t checked it out before, you should absolutely do so, but those who have already fully explored the old west won’t find anything new here or much reason to buy it again outside of the handheld factor\. For some, though, that will be all the incentive they need\.|5|
-|IGN Spain|80\.0|Red Dead Redemption is really enjoyable on PS4 and Nintendo Switch\. After thirteen years, the Rockstar classic holds up like no other, and these adjustments are more than enough for a very satisfying experience\. Many of us would have liked something more, but for both nostalgic and new fans of the saga, this port is a fantastic opportunity to get into the boots of John Marston\.|5|
-|Nintendo Life|80\.0|Red Dead Redemption on Switch is a straightforward port of 2010's masterpiece with no added bells or whistles for a rather high price tag\. If you can get over that, this is a game we highly recommend digging into, especially if you've yet to experience it\. Rockstar's Western epic holds up surprisingly well, its story is as powerful as ever, its knockabout action still feels great, and it looks and plays perfectly well on Nintendo's console\. Multiplayer has been cut, which is a sore but understandable excision, and we'd really have liked to see effort put into adding gyro controls or touching up the graphics a little, but it is what it is\. This is a proper all-timer ported successfully to Switch and, if you can stump up the cash, you'll have a great time here regardless of the lack of TLC\.|5|
-|IGN Spain|80\.0|Red Dead Redemption is an exceptional game, and its PC port more than delivers, offering a well-optimized experience even for less powerful devices\. Even so, it is missing some substantial additions or improvements after so many years of waiting\.|7|
-|The Games Machine|80\.0|Finally, after fourteen years, Red Dead Redemption also arrives on PC\. The title has aged very well, unfortunately this conversion brings with it countless technical problems\.|7|
-|SECTOR\.sk|80\.0|This cult western has long been absent from the PC, although its sequel was released a few years ago\. Rockstar has finally released it on this platform, but with outdated graphics and a high price tag\.|7|
-|GameMAG|80\.0|The silver lining here is that now the game is finally freed from the cage of old hardware\. And that's a great thing\.|7|
-|SomHráč\.sk|80\.0|Red Dead Redemption is an excellent game in a bit of a lazy repackaging\. If you haven't played it yet, go right ahead, but otherwise, there's not much for you here\.|7|
-|Cultured Vultures|80\.0|Red Dead Redemption on the Switch is the exact same Western epic you know and love\. That's both its greatest strength and its greatest weakness\.|7|
-|Digital Chumps|77\.0|It's nothing special to groundbreaking to write home on\. There isn't any new story additions, but I do think it's a great game to pick up if you want to roam what is left of the untamed west while you still can\.|7|
-|Entertainium|75\.0|Red Dead Redemption has certainly aged like a fine wine, still retaining its satisfying gameplay and an enormous, gorgeous wild west to explore\.|4|
-|PSX Brasil|75\.0|In its original form, Red Dead Redemption is nearly perfect in all its key aspects, such as narrative, gameplay, and artistic concept\. The 2023 PS4 remaster was timid in updating definition and performance, but did enough to introduce it to a new generation and fill a gap for longtime fans\. All of this is now confirmed by the native PlayStation 5 version, with its 4K at 60fps with HDR, things that seem like little - and in a way, they are - but which at least offer the most solid, beautiful, and stable experience possible for one of the greatest classics in gaming history\.|5|
-|Gameffine|75\.0|Rating the Red Dead Redemption PC port proved to be a painful process for me\. On the one hand, you have a basic but solid port of one of the most requested and highly rated games of all time\. On the other hand, the pricing of the PC port is one of the most egregious this year\. What’s even worse is Rockstar’s utter disregard for regional pricing\. With pricing the way it is now, I cannot in good conscience recommend Red Dead Redemption to our Indian audience\.|5|
-|Duuro Magazine|75\.0|If you have played the game back in 2010 with fond memories of it and you have 50 bucks to waste, then absolutely go for it as the game is as good as you remember it\. But if you are on a budget, there are newer and better games you can spend your hard earned cash\.|5|
-|GamingTrend|75\.0|Rockstar's port of Red Dead Redemption on the Playstation 4 and Nintendo Switch provides an opportunity for both newcomers and fans alike to experience one of gaming's most memorable adventures once again\. While there are some improvements to the visuals and performance, remnants of the game's age still bleed through\. If you can look past the outrageous price tag and some cut content, then your journey back to the Wild West is definitely one worth taking\.|5|
-|Press Start|75\.0|The Switch port of Red Dead Redemption is a faithful way to get into the world of Red Dead\. It looks good as long as you adjust expectations and consider the game's age, and performs consistently well in both handheld and docked modes\. While many aspects will feel dated, I still had a fun time exploring the old west with John during the last gasps of the American frontier\.|5|
-|PSX Brasil|75\.0|Although not the version expected by many players, Red Dead Redemption shows strength as one of the best games of all time\. The 2023 version is the most stable option, but it could be much better\.|7|
-|Evilgamerz|72\.0|Without a doubt, Red Dead Redemption is a more than fantastic game that is an excellent addition, especially on the Switch, but the asking price of 50 euros is way too much for such a simple port and that leaves a sour aftertaste\. If the price is not a problem for you, then this is a great game\. Fortunately, it has not become such a fiasco as the GTA trilogy, but next time we would rather see a full remake\.|5|
-|Merlin'in Kazanı|72\.0|Coming to PC after years, Red Dead Redemption was disappointing with outdated graphics and a high price\. Rockstar seems to have presented the game with minimal effort without updating it\.|7|
-|GamingBolt|70\.0|Red Dead Redemption's current-gen debut does a lot to improve on the original experience, but it isn't enough to make this one worthy of the systems it's running on\. Although it is the definitive way to play the game, this is a title that deserved a full-fledged remake\.|5|
-|Worth Playing|70\.0|Even after 14 years, Red Dead Redemption remains a good example of how to do a proper Western in video game form\. The main adventure is more focused than the sequel due to the relatively smaller cast and scope of your travels, but there are also plenty of side-quests that make it worthwhile to divert from the main questline\. Undead Nightmare remains one of the better zombie games out there, and it still feels distinct after all these years\. You just wish that there was more work done to the graphics outside of adding HDR and upping the brightness, especially since they're charging $50 for a 14-year-old port\. The game is still worth adding to your library, but you might want to wait for a very good discount\.|5|
-|Cubed3|70\.0|Despite its gameplay flaws, Red Dead Redemption is a classic on seventh gen consoles\. Its well-crafted characters and script are among the era's best\. It's a technological marvel with meticulous attention to detail\. While the gameplay may require adaptation on the player's part, it's worth it because Red Dead Redemption's overall experience is greater than the sum of its individual parts\.|5|
-|Gameffine|70\.0|While Red Dead Redemption is a spectacular masterpiece on its own, its PlayStation 4 port hardly brings anything new to the table with a steep price tag of its own\. While it’s a huge missed opportunity after a decade-long wait, it’s nice that more modern systems besides Xbox consoles can finally play this piece of art\. As for the recommendation, you should pick this up while it is on sale or wait for the possible PC and PS5 ports that may hit the stores next year\.|5|
-|WayTooManyGames|70\.0|This game has aged a lot\. Although I did have fun with Red Dead Redemption, I can’t help but think this is just a bit below the average of what we expect from a 2023 title being released at a ludicrously premium price\. Having this on-the-go, whilst a novel concept, is a bit detrimental to its epic, movie-like plot and structure\. This benefits from being played on a bigger screen, and by doing so, it looks a bit worse\. Not to mention the fact its controls and physics are simply too clunky, even for Xbox 360 standards\.|5|
-|Impulsegamer|70\.0|Overall, after all these years, Red Dead Redemption is still a great game that offers players a compelling narrative, a fantastic open world, and an overall highly engaging gameplay experience\. However, the PS4 port isn't something that can easily be recommended to those who've already played the game and its DLC or even own the original bundle, at least at its current asking price\. As such, if you've never played the game and are still interested in the port, I'd advise waiting for a sale or buying the Switch port, as that at least offers the value of playing the game on the go\.|5|
-|Push Square|60\.0|The bottom line here is that Red Dead Redemption deserves so much more\.|4|
-|KonsoliFIN|60\.0|It only took 14 years, but Red Dead Redemption is finally out on PC\. While the heady mix of Sam Peckinpah, Clint Eastwood, and Blood Meridian is still superlative in places, time hasn't treated all aspects of Rockstar's great western kindly\. This one might be for completionists only\.|5|
-|Thumb Culture|60\.0|Even though I looked forward to playing Red Dead Redemption after playing, I think it would have been better off with a remaster\. Maybe it’s because of the vast improvements I enjoyed in Red Dead Redemption 2, but I didn’t find this as enjoyable as I did back on PS3\.|5|
-|Expansive|60\.0|Red Dead Redemption impresses thirteen years on by still offering great storytelling, fun missions and a gripping, cinematic adventure from start to finish\. Double Eleven have worked magic and provided a practically perfect port on Nintendo Switch that’s, for the most part, a like-for-like recreation, and in some cases better than ever\. Stripped out multiplayer, a lack of Switch specific features and a higher than expected price point may deter some players, but with a stable frame rate and stunning, vivid visuals, the opportunity to play as John Marston anywhere and everywhere makes for a very tempting proposition\.|5|
+| Medio | Puntuación | Comentario | Índice IA |
+| :--- | :---: | :--- | :---: |
+| Gaming Age | 100.0 | Red Dead Redemption fue un gran juego cuando salió en 2010, y esto demuestra que sigue siéndolo en 2023. Si te lo perdiste hace trece años, ahora es el momento de jugarlo. | 3 |
+| Bastidores | 100.0 | Sigue siendo uno de los mayores logros de Rockstar, convirtiendo la muerte del Viejo Oeste en un viaje trágico e inolvidable. | 4 |
+| Saving Content | 100.0 | En cuanto al precio, creo que vale la pena, pero debería ser algo más barato dado el tiempo transcurrido. Es un juego que perdura, no solo nostalgia. | 5 |
+| Portal E7 | 100.0 | Sin duda, uno de los mejores y más impresionantes títulos de la generación de Xbox 360 y PS3. Una historia emotiva con personajes carismáticos. | 5 |
+| Digital Chumps | 98.0 | Es un juego que superará la prueba del tiempo sin importar nada... El Oeste siempre tendrá un lugar especial en mi corazón. | 7 |
+| Player2.net.au | 91.0 | El precio es lo único malo. Ha envejecido como el buen vino; la jugabilidad es perfecta, el arte es impresionante y la historia mantiene su impacto. | 5 |
+| Enternity.gr | 90.0 | Pertenece a la categoría de juegos que te hacen preguntarte cómo juzgar una leyenda de esa época con los estándares tecnológicos actuales. | 4 |
+| Eternal Games | 90.0 | Una de las narrativas más destacadas de la historia. A pesar de problemas como la repetición, sigue siendo una experiencia excepcional. | 5 |
+| Rectify Gaming | 90.0 | Los mods le dan nueva vida. Con cargas rápidas y mejor estabilidad, la versión de PC es la mejor forma de explorar el viaje de John Marston. | 5 |
+| NoobFeed | 90.0 | Una obra maestra que perdura. Aunque es un poco áspero en los bordes y el precio se siente elevado, es una pieza de historia de los videojuegos. | 5 |
+| Areajugones | 90.0 | En PC es un testimonio del poder del diseño atemporal. La fluidez de los FPS desbloqueados y la resolución 4K lo hacen la mejor versión. | 5 |
+| LevelUp | 90.0 | Un excelente remaster para disfrutar en PS5, portátil en Switch o retrocompatible en Xbox Series X/S. | 5 |
+| Andrenoob | 90.0 | En Steam es una experiencia que cumple las expectativas, superando a las versiones originales de PS3 y Xbox 360. | 7 |
+| Hobby Consolas | 88.0 | Es una obra maestra, pero el precio y la falta de mejoras importantes ensombrecen un poco lo que debería haber sido un gran debut. | 5 |
+| Hobby Consolas | 88.0 | Es una lástima que no se haya puesto más esfuerzo en la conversión, porque el RDR original sigue siendo una obra maestra. | 7 |
+| Impulsegamer | 86.0 | Ponte las botas bien gastadas de John Marston y vive el Salvaje Oeste en todo su esplendor. | 2 |
+| Game Forces PT | 85.0 | Una obra maestra del mundo abierto que combina una narración profunda con un mundo inmersivo. Un claro hito en el desarrollo de juegos. | 3 |
+| BaziCenter | 85.0 | Tras 14 años, finalmente llega a PC y sigue siendo relevante. Si no fuera por RDR2, sería la mejor experiencia de aventuras en el Oeste. | 3 |
+| Nintendo Blast | 85.0 | Una historia memorable. Si tienes dudas sobre experimentar este clásico moderno, te recomiendo al menos darle una oportunidad. | 3 |
+| STWGames Italia | 85.0 | Sigue influyendo en la industria. Esta versión para PC ofrece poco más de lo esencial, aunque sufre algunos problemas técnicos. | 5 |
+| EmuGlx.org | 85.0 | Un port de PC de alta calidad que, aparte de su precio elevado, deja poco que criticar. | 5 |
+| NintendoBoy | 85.0 | Excelente narrativa y diálogos. El precio elevado puede desanimar, pero no te arrepentirás de jugarlo. | 5 |
+| Game8 | 84.0 | El port de Switch mejora la presentación sin cambiar el diseño central. Minoritarias señales de envejecimiento, pero una forma definitiva de jugar. | 5 |
+| COGconnected | 84.0 | Excepcional captura del espíritu del Oeste. Falta el modo online y el precio es discutible, pero es una aventura de mundo abierto exquisita. | 5 |
+| Pizza Fria | 84.0 | Una oportunidad de oro para revivir uno de los mayores clásicos. Su narrativa y mundo siguen cautivando 14 años después. | 7 |
+| Evilgamerz | 80.0 | Si nunca lo has jugado, ¡es hora! No esperes calidad de remaster moderno, pero la jugabilidad y el contenido son sólidos como una roca. | 3 |
+| Uagna | 80.0 | Una lástima el precio de lanzamiento, ya que 50 € por un juego de 14 años merecía una restauración más sustancial. | 3 |
+| Echo Boomer | 80.0 | Finalmente llega a PC, ofreciendo la opción de jugar en "Ultra HD" sin compromisos. | 4 |
+| TestingBuddies | 80.0 | 50 euros es un precio elevado para un juego de 14 años con pocos cambios técnicos. Recomendable para nuevos jugadores, menos para quienes ya lo jugaron. | 5 |
+| SpaceNerd.it | 80.0 | Aún es una maravilla explorar este juego. Rockstar logra traer buenos recuerdos con un port estable. | 5 |
+| GameOnly | 80.0 | Es la mejor edición de las aventuras de John Marston. Gráficamente se queda corta, pero en jugabilidad sigue siendo excepcionalmente disfrutable. | 5 |
+| Gamepressure | 80.0 | Una experiencia increíble. Si ya lo jugaste, no te pierdes nada nuevo, pero si tenías curiosidad, espera a una oferta. | 5 |
+| Niche Gamer | 80.0 | Aunque la jugabilidad lenta y la acción poco receptiva son cuestionables, vale la pena adaptarse porque es más que la suma de sus partes. | 5 |
+| NookGaming | 80.0 | Ha envejecido brillantemente. Lamentablemente, la falta de multijugador y el precio alto son puntos negativos para algunos. | 5 |
+| Hey Poor Player | 80.0 | Un port correcto para Switch. Si no lo has probado, hazlo, pero los que ya exploraron el viejo oeste no encontrarán nada nuevo. | 5 |
+| IGN Spain | 80.0 | Se disfruta mucho en PS4 y Switch. El clásico de Rockstar se mantiene como ningún otro. Muchos hubiéramos querido algo más. | 5 |
+| Nintendo Life | 80.0 | Un port directo sin mejoras adicionales por un precio alto. Recomendado si puedes superar ese detalle, ya que el juego es un "todo terreno". | 5 |
+| IGN Spain | 80.0 | El port de PC cumple, ofreciendo una experiencia bien optimizada, pero le faltan añadidos tras años de espera. | 7 |
+| The Games Machine | 80.0 | Finalmente llega a PC. El título ha envejecido muy bien, pero esta conversión trae innumerables problemas técnicos. | 7 |
+| SECTOR.sk | 80.0 | Rockstar finalmente lo lanzó en PC, pero con gráficos desactualizados y un precio alto. | 7 |
+| GameMAG | 80.0 | El lado positivo es que el juego finalmente es libre de la jaula del hardware antiguo. | 7 |
+| SomHráč.sk | 80.0 | Un juego excelente en un empaquetado un poco perezoso. Si no lo has jugado, adelante, pero si no, no hay mucho aquí para ti. | 7 |
+| Cultured Vultures | 80.0 | En Switch es la misma epopeya que conoces y amas. Esa es su mayor fortaleza y su mayor debilidad. | 7 |
+| Digital Chumps | 77.0 | No es nada rompedor. No hay añadidos a la historia, pero es un gran juego para pasear por lo que queda del oeste indómito. | 7 |
+| Entertainium | 75.0 | Ha envejecido como el buen vino, conservando una jugabilidad satisfactoria y un enorme y hermoso salvaje oeste. | 4 |
+| PSX Brasil | 75.0 | El remaster de PS4 fue tímido en actualizarse, pero la versión de PS5 ofrece una experiencia sólida, hermosa y estable. | 5 |
+| Gameffine | 75.0 | Por un lado, un port sólido; por otro, un precio indignante. Rockstar no muestra consideración por los precios regionales. | 5 |
+| Duuro Magazine | 75.0 | Si tienes 50 dólares para gastar, adelante. Pero si tienes un presupuesto ajustado, hay juegos más nuevos y mejores. | 5 |
+| GamingTrend | 75.0 | Oportunidad para experimentar la aventura, pero el precio escandaloso y el contenido recortado dejan marca. | 5 |
+| Press Start | 75.0 | Un port fiel para Switch. Aunque muchos aspectos se sienten anticuados, me divertí explorando el viejo oeste. | 5 |
+| PSX Brasil | 75.0 | Aunque no es la versión que muchos esperaban, RDR demuestra su fuerza como uno de los mejores juegos de la historia. | 7 |
+| Evilgamerz | 72.0 | El juego es fantástico, pero 50 euros es demasiado para un port tan simple. Esperábamos un remake completo. | 5 |
+| Merlin'in Kazanı | 72.0 | Decepcionante por sus gráficos desactualizados y precio alto. Parece un esfuerzo mínimo. | 7 |
+| GamingBolt | 70.0 | Hace mucho por mejorar la experiencia, pero no es suficiente para las plataformas actuales. Merecía un remake completo. | 5 |
+| Worth Playing | 70.0 | Sigue siendo un ejemplo de cómo hacer un buen western. Desearías que hubieran trabajado más los gráficos por 50 dólares. | 5 |
+| Cubed3 | 70.0 | Un clásico. A pesar de los defectos de jugabilidad, su script y personajes son de los mejores de la era. | 5 |
+| Gameffine | 70.0 | Una obra maestra, pero el port de PS4 apenas aporta nada por un precio elevado. Espera a una rebaja o a versiones de PC/PS5. | 5 |
+| WayTooManyGames | 70.0 | Ha envejecido mucho. Los controles y la física son toscos, incluso para los estándares de Xbox 360. | 5 |
+| Impulsegamer | 70.0 | Sigue siendo un gran juego, pero no se recomienda a quienes ya lo tienen, al menos no a ese precio. Mejor esperar a una oferta. | 5 |
+| Push Square | 60.0 | En resumen, Red Dead Redemption merece mucho más. | 4 |
+| KonsoliFIN | 60.0 | Después de 14 años llega a PC. Aunque es genial, el tiempo no ha tratado bien todos los aspectos. Solo para completistas. | 5 |
+| Thumb Culture | 60.0 | Creo que habría sido mejor un remaster. Tras disfrutar las mejoras de RDR2, no lo encontré tan disfrutable como en PS3. | 5 |
+| Expansive | 60.0 | Un port prácticamente perfecto en Switch. La falta de multijugador y el precio elevado pueden disuadir a algunos, pero es una propuesta tentadora. | 5 |
