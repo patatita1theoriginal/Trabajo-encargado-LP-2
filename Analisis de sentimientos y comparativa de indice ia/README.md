@@ -5,4 +5,4 @@
 
 > **Nota:** Para acceder a los notebooks y scripts de análisis de sentimientos, descarga y descomprime el archivo `Analisis de sentimientos y ia.zip` en tu máquina local.
 
-[Ver Dashboard en Vivo]([https://tu-usuario.github.io/tu-repositorio/dashboard_resenas_steam_opencritic.html](https://harmonious-gelato-7fc053.netlify.app/#))
+[Ver Dashboard en Vivo](https://tu-usuario.github.io/tu-repositorio/dashboard_resenas_steam_opencritic.html](https://harmonious-gelato-7fc053.netlify.app/#)
