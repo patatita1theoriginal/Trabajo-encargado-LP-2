@@ -6,12 +6,16 @@ Este documento detalla el procedimiento técnico utilizado para la extracción d
 ## 2. Metodología de Extracción
 El proceso de extracción se realizó mediante un script en Python que gestiona la obtención de datos de manera programática.
 
+### Código de Extracción (Arquitectura)
+El código utiliza `requests` para gestionar las peticiones HTTP y `pandas` para el tratamiento de datos. El bucle `while` implementa un mecanismo de paginación (`skip`) para eludir limitaciones de carga de datos, asegurando una recolección incremental hasta alcanzar el límite deseado (100 registros). 
+
+El script procesa la respuesta JSON, extrae campos clave como `medio`, `score` y `snippet`, y normaliza los datos para su exportación a un formato CSV limpio.
+
 ### Arquitectura del Proceso
 - **Lenguaje:** Python
 - **Bibliotecas clave:** `requests` (gestión de peticiones API), `pandas` (procesamiento de datos), `os` y `time` (automatización).
 - **Paginación:** Implementada mediante el parámetro `skip` para recorrer el historial de reseñas de forma paginada.
 - **Limpieza:** Se aplicó un filtro para eliminar duplicados y normalizar los tipos de datos en la columna `puntuacion`.
-
 
 
 ## 3. Análisis de Factibilidad: Detección de Contenido IA
