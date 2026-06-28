@@ -15,7 +15,7 @@
 <ul>
   <li>Almonacid Quispe, Jimmy Salomón (patatita1theoriginal) (20241374) </li>
   <li>Santillan Santa Cruz, Alex Josept (jois_2003) (20241402) </li>
-  <li>[Apellidos, Nombres] ([usuario_github]) ([código_estudiante]) </li>
+  <li>Perez Cardenas, Jhordan Oswaldo  (20240727-JPC) (20240727) </li>
 </ul>
 
 <h2>Objetivo general</h2>
